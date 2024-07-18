@@ -6,7 +6,7 @@ import DesktopRB from "../assets/images/Background_files/DesktopRB.png";
 
 const Footer = () => {
   return (
-    <articel className="bg-bottom">
+    <article className="bg-bottom">
       <div className="bg-LB">
         <img src={DesktopLB} alt="bg-LB" />
       </div>
@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="bg-RB">
         <img src={DesktopRB} alt="bg-RB" />
       </div>
-    </articel>
+    </article>
   );
 };
 
