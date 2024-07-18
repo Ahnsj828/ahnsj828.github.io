@@ -124,28 +124,22 @@
 
 // ===================================================
 
+// < 정리 완성 >
 import React, { useState } from "react";
-import "./Header.css";
+import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
 import DesktopLT from "../assets/images/Background_files/DesktopLT.png";
 import DesktopRT from "../assets/images/Background_files/DesktopRT.png";
-import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+// import "./Header.css";
 
 const Header = () => {
-  const [activeMenu, setActiveMenu] = useState();
+  const [activeMenu, setActiveMenu] = useState("home");
   const navigate = useNavigate();
 
   const handleMenuClick = (menu, path) => {
     setActiveMenu(menu);
     navigate(path);
   };
-
-  // const homeNavigate = useNavigate();
-
-  // const handleMenuClick = (menu, path) => {
-  //   setActiveMenu(menu);
-  //   navigate(path);
-  // };
 
   return (
     <Container>
@@ -275,95 +269,84 @@ const MenuContainer = styled.ul`
 // MenuHome = li
 const MenuHome = styled.li`
   position: relative;
-        font: normal 1.2rem/1 Kcc-Ganpan;
-        color: #352e1f;
-        padding: 0 23px;
-        text-transform: uppercase;
-        cursor: pointer;
-        &::before,
-        &::after {
-          content: "";
-          position: absolute;
-          -webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.3s;
-          transition: transform 0.3s ease-out, opacity 0.3s;
-        }
-        span {
-          &::before,
-          &::after {
-            content: "";
-            position: absolute;
-            -webkit-transition: -webkit-transform 0.3s ease-out 0.15s,
-              opacity 0s 0.05s;
-            transition: transform 0.3s ease-out 0.15s, opacity 0s 0.05s;
-          }
-        }
-        &::before,
-        & span::before {
-          top: -webkit-calc(50% - 0.3em);
-          top: calc(50% - 0.3em);
-          left: -0.1em;
-          width: 0.5em;
-          height: 0.5em;
-          opacity: 0;
-          -webkit-transform: translate3d(-0.6em, 0, 0) rotate(45deg);
-          transform: translate3d(-0.6em, 0, 0) rotate(45deg);
-        }
-        &::after,
-        & span::after {
-          bottom: -webkit-calc(50% - 0.35em);
-          bottom: calc(50% - 0.35em);
-          right: -0.1em;
-          width: 0.5em;
-          height: 0.5em;
-          opacity: 0;
-          -webkit-transform: translate3d(0.6em, 0, 0) rotate(45deg);
-          transform: translate3d(0.6em, 0, 0) rotate(45deg);
-        }
-        &:hover {
-          overflow: visible;
-        }
-        &:hover::before,
-        &:hover span::before {
-          -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
-          transform: translate3d(0, 0, 0) rotate(45deg);
-          opacity: 1;
-        }
-        &:hover::after,
-        &:hover span::after {
-          -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
-          transform: translate3d(0, 0, 0) rotate(45deg);
-          opacity: 1;
-        }
-  &::before,
-  & span::before {
-    border-right: 0.15em solid #ff5d2c;
-    border-top: 0.15em solid #ff5d2c;
-    opacity: ${({ active }) => (active ? 1 : 0)};
-    left: ${({ active }) => (active ? "0.3em" : 0)};
-  }
-
-  &::after,
-  & span::after {
-    border-left: 0.15em solid #ff5d2c;
-    border-bottom: 0.15em solid #ff5d2c;
-     opacity: ${({ active }) => (active ? 1 : 0)};
-    right: ${({ active }) => (active ? "0.3em" : 0)};
-  }
-  }
-
+  font: normal 1.2rem/1 Kcc-Ganpan;
+  padding: 0 23px;
+  text-transform: uppercase;
+  cursor: pointer;
   font-size: ${({ active }) => (active ? "1.3rem" : "1.2rem")};
   font-family: "Kcc-Ganpan";
   color: ${({ active }) => (active ? "#ff5d2c" : "#352e1f")};
   margin: ${({ active }) => (active ? "0 15px" : "0px")};
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    -webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.3s;
+    transition: transform 0.3s ease-out, opacity 0.3s;
+  }
+  span {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      -webkit-transition: -webkit-transform 0.3s ease-out 0.15s,
+        opacity 0s 0.05s;
+      transition: transform 0.3s ease-out 0.15s, opacity 0s 0.05s;
+    }
+  }
+  &::before,
+  & span::before {
+    top: -webkit-calc(50% - 0.3em);
+    top: calc(50% - 0.3em);
+    width: 0.5em;
+    height: 0.5em;
+    -webkit-transform: translate3d(-0.6em, 0, 0) rotate(45deg);
+    transform: translate3d(-0.6em, 0, 0) rotate(45deg);
+    border-right: 0.15em solid #ff5d2c;
+    border-top: 0.15em solid #ff5d2c;
+    opacity: ${({ active }) => (active ? 1 : 0)};
+    left: ${({ active }) => (active ? "0.3em" : "-0.1em")};
+  }
+  &::after,
+  & span::after {
+    bottom: -webkit-calc(50% - 0.35em);
+    bottom: calc(50% - 0.35em);
+    width: 0.5em;
+    height: 0.5em;
+    -webkit-transform: translate3d(0.6em, 0, 0) rotate(45deg);
+    transform: translate3d(0.6em, 0, 0) rotate(45deg);
+    border-left: 0.15em solid #ff5d2c;
+    border-bottom: 0.15em solid #ff5d2c;
+    opacity: ${({ active }) => (active ? 1 : 0)};
+    right: ${({ active }) => (active ? "0.3em" : "-0.1em")};
+  }
+  &:hover {
+    overflow: visible;
+  }
+  &:hover::before,
+  &:hover span::before {
+    -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+    transform: translate3d(0, 0, 0) rotate(45deg);
+    opacity: 1;
+  }
+  &:hover::after,
+  &:hover span::after {
+    -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+    transform: translate3d(0, 0, 0) rotate(45deg);
+    opacity: 1;
+  }
 `;
 
 const MenuIntroduce = styled.li`
   position: relative;
   font: normal 1.2rem/1 Kcc-Ganpan;
-  color: #352e1f;
   padding: 0 23px;
   text-transform: uppercase;
   cursor: pointer;
+  font-size: ${({ active }) => (active ? "1.3rem" : "1.2rem")};
+  font-family: "Kcc-Ganpan";
+  color: ${({ active }) => (active ? "#ff5d2c" : "#352e1f")};
+  margin: ${({ active }) => (active ? "0 15px" : "0px")};
   &::before,
   &::after {
     content: "";
@@ -385,23 +368,27 @@ const MenuIntroduce = styled.li`
   & span::before {
     top: -webkit-calc(50% - 0.3em);
     top: calc(50% - 0.3em);
-    left: -0.1em;
     width: 0.5em;
     height: 0.5em;
-    opacity: 0;
     -webkit-transform: translate3d(-0.6em, 0, 0) rotate(45deg);
     transform: translate3d(-0.6em, 0, 0) rotate(45deg);
+    border-right: 0.15em solid #ff5d2c;
+    border-top: 0.15em solid #ff5d2c;
+    opacity: ${({ active }) => (active ? 1 : 0)};
+    left: ${({ active }) => (active ? "0.3em" : "-0.1em")};
   }
   &::after,
   & span::after {
     bottom: -webkit-calc(50% - 0.35em);
     bottom: calc(50% - 0.35em);
-    right: -0.1em;
     width: 0.5em;
     height: 0.5em;
-    opacity: 0;
     -webkit-transform: translate3d(0.6em, 0, 0) rotate(45deg);
     transform: translate3d(0.6em, 0, 0) rotate(45deg);
+    border-left: 0.15em solid #ff5d2c;
+    border-bottom: 0.15em solid #ff5d2c;
+    opacity: ${({ active }) => (active ? 1 : 0)};
+    right: ${({ active }) => (active ? "0.3em" : "-0.1em")};
   }
   &:hover {
     overflow: visible;
@@ -418,36 +405,18 @@ const MenuIntroduce = styled.li`
     transform: translate3d(0, 0, 0) rotate(45deg);
     opacity: 1;
   }
-  &::before,
-  & span::before {
-    border-right: 0.15em solid #ff5d2c;
-    border-top: 0.15em solid #ff5d2c;
-    opacity: ${({ active }) => (active ? 1 : 0)};
-    left: ${({ active }) => (active ? "0.3em" : 0)};
-  }
-
-  &::after,
-  & span::after {
-    border-left: 0.15em solid #ff5d2c;
-    border-bottom: 0.15em solid #ff5d2c;
-     opacity: ${({ active }) => (active ? 1 : 0)};
-    right: ${({ active }) => (active ? "0.3em" : 0)};
-  }
-  }
-
-  font-size: ${({ active }) => (active ? "1.3rem" : "1.2rem")};
-  font-family: "Kcc-Ganpan";
-  color: ${({ active }) => (active ? "#ff5d2c" : "#352e1f")};
-  margin: ${({ active }) => (active ? "0 15px" : "0px")};
 `;
 
 const MenuProject = styled.li`
   position: relative;
   font: normal 1.2rem/1 Kcc-Ganpan;
-  color: #352e1f;
   padding: 0 23px;
   text-transform: uppercase;
   cursor: pointer;
+  font-size: ${({ active }) => (active ? "1.3rem" : "1.2rem")};
+  font-family: "Kcc-Ganpan";
+  color: ${({ active }) => (active ? "#ff5d2c" : "#352e1f")};
+  margin: ${({ active }) => (active ? "0 15px" : "0px")};
   &::before,
   &::after {
     content: "";
@@ -469,23 +438,27 @@ const MenuProject = styled.li`
   & span::before {
     top: -webkit-calc(50% - 0.3em);
     top: calc(50% - 0.3em);
-    left: -0.1em;
     width: 0.5em;
     height: 0.5em;
-    opacity: 0;
     -webkit-transform: translate3d(-0.6em, 0, 0) rotate(45deg);
     transform: translate3d(-0.6em, 0, 0) rotate(45deg);
+    border-right: 0.15em solid #ff5d2c;
+    border-top: 0.15em solid #ff5d2c;
+    opacity: ${({ active }) => (active ? 1 : 0)};
+    left: ${({ active }) => (active ? "0.3em" : "-0.1em")};
   }
   &::after,
   & span::after {
     bottom: -webkit-calc(50% - 0.35em);
     bottom: calc(50% - 0.35em);
-    right: -0.1em;
     width: 0.5em;
     height: 0.5em;
-    opacity: 0;
     -webkit-transform: translate3d(0.6em, 0, 0) rotate(45deg);
     transform: translate3d(0.6em, 0, 0) rotate(45deg);
+    border-left: 0.15em solid #ff5d2c;
+    border-bottom: 0.15em solid #ff5d2c;
+    opacity: ${({ active }) => (active ? 1 : 0)};
+    right: ${({ active }) => (active ? "0.3em" : "-0.1em")};
   }
   &:hover {
     overflow: visible;
@@ -502,36 +475,18 @@ const MenuProject = styled.li`
     transform: translate3d(0, 0, 0) rotate(45deg);
     opacity: 1;
   }
-  &::before,
-  & span::before {
-    border-right: 0.15em solid #ff5d2c;
-    border-top: 0.15em solid #ff5d2c;
-    opacity: ${({ active }) => (active ? 1 : 0)};
-    left: ${({ active }) => (active ? "0.3em" : 0)};
-  }
-
-  &::after,
-  & span::after {
-    border-left: 0.15em solid #ff5d2c;
-    border-bottom: 0.15em solid #ff5d2c;
-     opacity: ${({ active }) => (active ? 1 : 0)};
-    right: ${({ active }) => (active ? "0.3em" : 0)};
-  }
-  }
-
-  font-size: ${({ active }) => (active ? "1.3rem" : "1.2rem")};
-  font-family: "Kcc-Ganpan";
-  color: ${({ active }) => (active ? "#ff5d2c" : "#352e1f")};
-  margin: ${({ active }) => (active ? "0 15px" : "0px")};
 `;
 
 const MenuExample = styled.li`
   position: relative;
   font: normal 1.2rem/1 Kcc-Ganpan;
-  color: #352e1f;
   padding: 0 23px;
   text-transform: uppercase;
   cursor: pointer;
+  font-size: ${({ active }) => (active ? "1.3rem" : "1.2rem")};
+  font-family: "Kcc-Ganpan";
+  color: ${({ active }) => (active ? "#ff5d2c" : "#352e1f")};
+  margin: ${({ active }) => (active ? "0 15px" : "0px")};
   &::before,
   &::after {
     content: "";
@@ -553,23 +508,27 @@ const MenuExample = styled.li`
   & span::before {
     top: -webkit-calc(50% - 0.3em);
     top: calc(50% - 0.3em);
-    left: -0.1em;
     width: 0.5em;
     height: 0.5em;
-    opacity: 0;
     -webkit-transform: translate3d(-0.6em, 0, 0) rotate(45deg);
     transform: translate3d(-0.6em, 0, 0) rotate(45deg);
+    border-right: 0.15em solid #ff5d2c;
+    border-top: 0.15em solid #ff5d2c;
+    opacity: ${({ active }) => (active ? 1 : 0)};
+    left: ${({ active }) => (active ? "0.3em" : "-0.1em")};
   }
   &::after,
   & span::after {
     bottom: -webkit-calc(50% - 0.35em);
     bottom: calc(50% - 0.35em);
-    right: -0.1em;
     width: 0.5em;
     height: 0.5em;
-    opacity: 0;
     -webkit-transform: translate3d(0.6em, 0, 0) rotate(45deg);
     transform: translate3d(0.6em, 0, 0) rotate(45deg);
+    border-left: 0.15em solid #ff5d2c;
+    border-bottom: 0.15em solid #ff5d2c;
+    opacity: ${({ active }) => (active ? 1 : 0)};
+    right: ${({ active }) => (active ? "0.3em" : "-0.1em")};
   }
   &:hover {
     overflow: visible;
@@ -586,36 +545,18 @@ const MenuExample = styled.li`
     transform: translate3d(0, 0, 0) rotate(45deg);
     opacity: 1;
   }
-  &::before,
-  & span::before {
-    border-right: 0.15em solid #ff5d2c;
-    border-top: 0.15em solid #ff5d2c;
-    opacity: ${({ active }) => (active ? 1 : 0)};
-    left: ${({ active }) => (active ? "0.3em" : 0)};
-  }
-
-  &::after,
-  & span::after {
-    border-left: 0.15em solid #ff5d2c;
-    border-bottom: 0.15em solid #ff5d2c;
-     opacity: ${({ active }) => (active ? 1 : 0)};
-    right: ${({ active }) => (active ? "0.3em" : 0)};
-  }
-  }
-
-  font-size: ${({ active }) => (active ? "1.3rem" : "1.2rem")};
-  font-family: "Kcc-Ganpan";
-  color: ${({ active }) => (active ? "#ff5d2c" : "#352e1f")};
-  margin: ${({ active }) => (active ? "0 15px" : "0px")};
 `;
 
 const MenuContact = styled.li`
   position: relative;
   font: normal 1.2rem/1 Kcc-Ganpan;
-  color: #352e1f;
   padding: 0 23px;
   text-transform: uppercase;
   cursor: pointer;
+  font-size: ${({ active }) => (active ? "1.3rem" : "1.2rem")};
+  font-family: "Kcc-Ganpan";
+  color: ${({ active }) => (active ? "#ff5d2c" : "#352e1f")};
+  margin: ${({ active }) => (active ? "0 15px" : "0px")};
   &::before,
   &::after {
     content: "";
@@ -637,23 +578,27 @@ const MenuContact = styled.li`
   & span::before {
     top: -webkit-calc(50% - 0.3em);
     top: calc(50% - 0.3em);
-    left: -0.1em;
     width: 0.5em;
     height: 0.5em;
-    opacity: 0;
     -webkit-transform: translate3d(-0.6em, 0, 0) rotate(45deg);
     transform: translate3d(-0.6em, 0, 0) rotate(45deg);
+    border-right: 0.15em solid #ff5d2c;
+    border-top: 0.15em solid #ff5d2c;
+    opacity: ${({ active }) => (active ? 1 : 0)};
+    left: ${({ active }) => (active ? "0.3em" : "-0.1em")};
   }
   &::after,
   & span::after {
     bottom: -webkit-calc(50% - 0.35em);
     bottom: calc(50% - 0.35em);
-    right: -0.1em;
     width: 0.5em;
     height: 0.5em;
-    opacity: 0;
     -webkit-transform: translate3d(0.6em, 0, 0) rotate(45deg);
     transform: translate3d(0.6em, 0, 0) rotate(45deg);
+    border-left: 0.15em solid #ff5d2c;
+    border-bottom: 0.15em solid #ff5d2c;
+    opacity: ${({ active }) => (active ? 1 : 0)};
+    right: ${({ active }) => (active ? "0.3em" : "-0.1em")};
   }
   &:hover {
     overflow: visible;
@@ -670,28 +615,8 @@ const MenuContact = styled.li`
     transform: translate3d(0, 0, 0) rotate(45deg);
     opacity: 1;
   }
-  &::before,
-  & span::before {
-    border-right: 0.15em solid #ff5d2c;
-    border-top: 0.15em solid #ff5d2c;
-    opacity: ${({ active }) => (active ? 1 : 0)};
-    left: ${({ active }) => (active ? "0.3em" : 0)};
-  }
-
-  &::after,
-  & span::after {
-    border-left: 0.15em solid #ff5d2c;
-    border-bottom: 0.15em solid #ff5d2c;
-     opacity: ${({ active }) => (active ? 1 : 0)};
-    right: ${({ active }) => (active ? "0.3em" : 0)};
-  }
-  }
-
-  font-size: ${({ active }) => (active ? "1.3rem" : "1.2rem")};
-  font-family: "Kcc-Ganpan";
-  color: ${({ active }) => (active ? "#ff5d2c" : "#352e1f")};
-  margin: ${({ active }) => (active ? "0 15px" : "0px")};
 `;
+
 // Span = span;
 const Span = styled.span`
   &::before,
