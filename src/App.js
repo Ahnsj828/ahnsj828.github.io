@@ -5,11 +5,6 @@ import Introduce from "./pages/Introduce";
 import Project from "./pages/Project";
 import Example from "./pages/Example";
 import Contact from "./pages/Contact";
-import styled from "styled-components";
-
-const Body = styled.div`
-  color: red;
-`;
 
 function App() {
   return (
