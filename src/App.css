@@ -1,64 +1,20 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-/* .App {
-  background: #fff7e1;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: column;
-  text-align: center;
-} */
+/* .app-container { */
 body {
   background: #fff7e1;
+  /* width: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: column;
-  text-align: center;
+  text-align: center; */
 }
 
-#cursor-card {
+/* #cursor-card {
   position: absolute;
   top: 0;
   left: 0;
-  pointer-events: none; /* 마우스 이벤트를 무시하여 p5.js 캔버스 위에서 마우스 이벤트가 발생하도록 합니다. */
-  z-index: 9999; /* 다른 요소 위에 렌더링되도록 z-index 설정 */
-}
+  pointer-events: none; 
+   마우스 이벤트를 무시하여 p5.js 캔버스 위에서 마우스 이벤트가 발생하도록 합니다. 
+  z-index: 9999; 
+   다른 요소 위에 렌더링되도록 z-index 설정 
+} */
