@@ -1,10 +1,10 @@
-// src/index.js
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
-import MouseEffect from "./features/MouseEffect"; // MouseEffect 컴포넌트 import
+import MouseEffect from "./features/MouseEffect";
+import App from "./App";
 
 const Global = createGlobalStyle`
   @font-face {
@@ -26,12 +26,13 @@ const Global = createGlobalStyle`
   }
 `;
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Global />
-      <MouseEffect /> {/* MouseEffect 컴포넌트를 전역으로 추가 */}
+      <App />
     </BrowserRouter>
-  </React.StrictMode>
+    <MouseEffect />
+  </React.StrictMode>,
+  document.getElementById("root")
 );

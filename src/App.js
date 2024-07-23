@@ -1,4 +1,3 @@
-// src/App.js
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 // import MouseEffect from "./features/MouseEffect"; // MouseEffect 컴포넌트 import

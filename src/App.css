@@ -54,3 +54,11 @@ body {
   align-items: column;
   text-align: center;
 }
+
+#cursor-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* 마우스 이벤트를 무시하여 p5.js 캔버스 위에서 마우스 이벤트가 발생하도록 합니다. */
+  z-index: 9999; /* 다른 요소 위에 렌더링되도록 z-index 설정 */
+}
