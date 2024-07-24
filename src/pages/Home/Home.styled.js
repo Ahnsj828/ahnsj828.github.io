@@ -59,7 +59,7 @@ export const HomeTitles = styled.div`
 export const HomeTitle = styled.div`
   font-family: "Road-Rage", sans-serif; /* GlobalStyles에서 선언한 폰트 이름을 사용합니다. */
   font-size: 6rem;
-  line-height: 0.7;
+  line-height: 5rem;
   letter-spacing: 0.05rem;
   margin-bottom: 0.7rem;
   animation: right1 0.4s 0.3s linear;
