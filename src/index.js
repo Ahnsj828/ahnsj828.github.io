@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
@@ -26,13 +26,14 @@ const Global = createGlobalStyle`
   }
 `;
 
-ReactDOM.render(
+const root = createRoot(document.getElementById("root"));
+
+root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Global />
       <App />
     </BrowserRouter>
     <MouseEffect />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
