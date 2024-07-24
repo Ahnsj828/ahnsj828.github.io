@@ -53,8 +53,7 @@
 // export default Home;
 
 // ========================================================
-
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import gsap from "gsap";
@@ -66,12 +65,18 @@ import {
   HomeImgs,
   HomeTitles,
   HomeBg,
+  HomeSky,
+  Star,
+  Moon,
+  MoonShape,
+  Meteoro,
+  HomeTitle,
 } from "./Home.styled";
 
 gsap.registerPlugin(Draggable); // Draggable 플러그인 등록
 
 const Home = () => {
-  const bgImageRef = useRef(null);
+  const bgImageRef = React.useRef(null);
 
   useEffect(() => {
     const bgImage = bgImageRef.current;
@@ -97,6 +102,9 @@ const Home = () => {
       .to(bgImage, { duration: 0.2, y: -80 })
       .to(bgImage, { duration: 0.2, y: 0 });
 
+    // JavaScript 초기화 함수 호출
+    // init();
+
     // Cleanup 함수
     return () => {
       draggable[0].kill(); // Draggable 애니메이션 정리
@@ -110,8 +118,19 @@ const Home = () => {
       <HomeSection>
         <HomeImgs>
           <HomeBg ref={bgImageRef} src={homeBg} alt="Falling" />
+          <HomeSky>
+            <Star></Star>
+            <Moon>
+              <MoonShape></MoonShape>
+            </Moon>
+            <Meteoro></Meteoro>
+          </HomeSky>
         </HomeImgs>
-        <HomeTitles></HomeTitles>
+        <HomeTitles>
+          <HomeTitle>Dream of</HomeTitle>
+          <HomeTitle>Becoming</HomeTitle>
+          <HomeTitle>A Developer</HomeTitle>
+        </HomeTitles>
       </HomeSection>
       <Footer />
     </HomeContain>
