@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import styled from "styled-components";
 import gsap from "gsap";
-import homeBg from "../assets/images/Section/Home/homeBg.png";
+import homeBg from "../../assets/images/Section/Home/homeBg.png";
 
 const Home = () => {
   const bgImageRef = useRef(null);
@@ -54,6 +54,7 @@ const HomeContain = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
+
   margin: 0 auto;
   overflow: hidden;
 `;

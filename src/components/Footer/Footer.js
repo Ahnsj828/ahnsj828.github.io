@@ -1,8 +1,8 @@
 import React from "react";
 import "./Footer.css";
-import DesktopLB from "../assets/images/Background_files/DesktopLB.png";
-import DesktopRM from "../assets/images/Background_files/DesktopRM.png";
-import DesktopRB from "../assets/images/Background_files/DesktopRB.png";
+import DesktopLB from "../../assets/images/Background_files/DesktopLB.png";
+import DesktopRM from "../../assets/images/Background_files/DesktopRM.png";
+import DesktopRB from "../../assets/images/Background_files/DesktopRB.png";
 
 const Footer = () => {
   return (

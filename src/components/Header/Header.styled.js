@@ -15,7 +15,7 @@ export const Container = styled.header`
   transition: all 0.5s ease;
 `;
 
-export const Article = styled.article`
+export const BgTop = styled.article`
   padding: 0;
   .bg-LT,
   .bg-RT {

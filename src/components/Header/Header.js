@@ -519,11 +519,11 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { StyleSheetManager } from "styled-components"; // StyleSheetManager import 추가
-import DesktopLT from "../assets/images/Background_files/DesktopLT.png";
-import DesktopRT from "../assets/images/Background_files/DesktopRT.png";
+import DesktopLT from "../../assets/images/Background_files/DesktopLT.png";
+import DesktopRT from "../../assets/images/Background_files/DesktopRT.png";
 import {
   Container,
-  Article,
+  BgTop,
   HeaderContainer,
   Logo,
   MenuContainer,
@@ -607,14 +607,14 @@ const Header = () => {
     <StyleSheetManager shouldForwardProp={(prop) => !["active"].includes(prop)}>
       {/* shouldForwardProp으로 active prop 필터링 설정 */}
       <Container>
-        <Article>
+        <BgTop>
           <div className="bg-LT">
             <img src={DesktopLT} alt="bg-LT" />
           </div>
           <div className="bg-RT">
             <img src={DesktopRT} alt="bg-RT" />
           </div>
-        </Article>
+        </BgTop>
         <HeaderContainer>
           <Logo
             active={activeMenu === "home"}

@@ -1,10 +1,10 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Introduce from "./pages/Introduce";
-import Project from "./pages/Project";
-import Example from "./pages/Example";
-import Contact from "./pages/Contact";
+import Home from "./pages/Home/Home";
+import Introduce from "./pages/Introduce/Introduce";
+import Project from "./pages/Project/Project";
+import Example from "./pages/Example/Example";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
