@@ -56,14 +56,17 @@
 import React, { useEffect, useRef } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+<<<<<<< HEAD
 import gsap from "gsap"; // GSAP import
 import { Draggable, TextPlugin } from "gsap/all"; // Draggable 및 TextPlugin import
+=======
+import { gsap, TextPlugin } from "gsap/all";
+>>>>>>> a2b912da2b4473410a2faad5c5ec8961abfdfba1
 import homeBg from "../../assets/images/Section/Home/homeBg.png";
 import {
   HomeContain,
   HomeSection,
   HomeImgs,
-  HomeTitles,
   HomeBg,
   HomeSky,
   Star,
@@ -73,8 +76,12 @@ import {
   HomeTitle,
 } from "./Home.styled";
 
+<<<<<<< HEAD
 // 필요한 플러그인 등록
 gsap.registerPlugin(Draggable, TextPlugin);
+=======
+gsap.registerPlugin(TextPlugin);
+>>>>>>> a2b912da2b4473410a2faad5c5ec8961abfdfba1
 
 const Home = () => {
   const bgImageRef = useRef(null);
@@ -87,6 +94,7 @@ const Home = () => {
     // 초기 위치 설정
     gsap.set(bgImage, { y: -500, opacity: 0 });
 
+<<<<<<< HEAD
     // Draggable을 이용한 배경 이미지 애니메이션 설정
     const draggable = Draggable.create(bgImage, {
       type: "y", // 수직 이동 설정
@@ -125,7 +133,35 @@ const Home = () => {
     return () => {
       draggable[0].kill(); // Draggable 애니메이션 정리
       tlBackground.kill(); // 배경 이미지 애니메이션 정리
+=======
+    // Draggable을 이용한 애니메이션 설정
+    // ...
+
+    // 애니메이션 정의
+    const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+
+    // 드래깅 애니메이션 추가
+    // ...
+
+    return () => {
+      // Cleanup 함수
+      // ...
+>>>>>>> a2b912da2b4473410a2faad5c5ec8961abfdfba1
     };
+  }, []);
+
+  useEffect(() => {
+    const typewriter = typewriterRef.current;
+
+    // Initialize the text plugin and create the timeline
+    gsap.to(typewriter, {
+      duration: 1.5,
+      text: {
+        value: "Dream of",
+        ease: "none",
+        delimiter: "",
+      },
+    });
   }, []);
 
   return (
@@ -142,7 +178,11 @@ const Home = () => {
           </HomeSky>
         </HomeImgs>
         <HomeTitles>
+<<<<<<< HEAD
           <HomeTitle ref={typewriterRef}></HomeTitle>
+=======
+          <div ref={typewriterRef} className="typewriter"></div>
+>>>>>>> a2b912da2b4473410a2faad5c5ec8961abfdfba1
         </HomeTitles>
       </HomeSection>
     </HomeContain>
