@@ -1,0 +1,124 @@
+
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { gsap } from "gsap";
+import DesktopLT from "../../assets/images/Background_files/DesktopLT.png";
+import DesktopRT from "../../assets/images/Background_files/DesktopRT.png";
+import {
+  Container,
+  BgTop,
+  HeaderContainer,
+  Logo,
+  MenuContainer,
+  MenuItem,
+  Span,
+} from "./Header.styled";
+
+const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [activeMenu, setActiveMenu] = useState(
+    getActiveMenu(location.pathname)
+  );
+
+  // 경로를 기반으로 활성 메뉴를 설정하는 함수
+  function getActiveMenu(pathname) {
+    if (pathname === "/") return "home";
+    else if (pathname === "/introduce") return "introduce";
+    else if (pathname === "/project") return "project";
+    else if (pathname === "/example") return "example";
+    else if (pathname === "/contact") return "contact";
+    return "home"; // 기본적으로 home을 활성화 상태로 설정
+  }
+
+  const handleMenuClick = (menu, path) => {
+    setActiveMenu(menu);
+    navigate(path);
+  };
+
+  // GSAP을 사용하여 로고 애니메이션 적용
+  useEffect(() => {
+    gsap.from(".logo-back", { opacity: 0, duration: 1, delay: 0.5 });
+  }, []);
+
+  // Menu 항목들을 하나의 styled-component로 대체
+  const Menu = ({ active, onClick, children }) => (
+    <MenuItem active={active ? 1 : 0} onClick={onClick}>
+      <Span>{children}</Span>
+    </MenuItem>
+  );
+
+  // 각 Menu 항목을 정의
+  const MenuHome = ({ active, onClick }) => (
+    <Menu active={active} onClick={() => handleMenuClick("home", "/")}>
+      Home
+    </Menu>
+  );
+
+  const MenuIntroduce = ({ active, onClick }) => (
+    <Menu
+      active={active}
+      onClick={() => handleMenuClick("introduce", "/introduce")}
+    >
+      Introduce
+    </Menu>
+  );
+
+  const MenuProject = ({ active, onClick }) => (
+    <Menu
+      active={active}
+      onClick={() => handleMenuClick("project", "/project")}
+    >
+      Project
+    </Menu>
+  );
+
+  const MenuExample = ({ active, onClick }) => (
+    <Menu
+      active={active}
+      onClick={() => handleMenuClick("example", "/example")}
+    >
+      Example
+    </Menu>
+  );
+
+  const MenuContact = ({ active, onClick }) => (
+    <Menu
+      active={active}
+      onClick={() => handleMenuClick("contact", "/contact")}
+    >
+      Contact
+    </Menu>
+  );
+
+  return (
+    <Container>
+      <BgTop>
+        <div className="bg-LT">
+          <img src={DesktopLT} alt="bg-LT" />
+        </div>
+        <div className="bg-RT">
+          <img src={DesktopRT} alt="bg-RT" />
+        </div>
+      </BgTop>
+      <HeaderContainer>
+        <Logo
+          active={activeMenu === "home"}
+          onClick={() => handleMenuClick("home", "/")}
+        >
+          Ahn
+          <span className="logo-back">.</span>
+        </Logo>
+        <MenuContainer>
+          <MenuHome active={activeMenu === "home"} />
+          <MenuIntroduce active={activeMenu === "introduce"} />
+          <MenuProject active={activeMenu === "project"} />
+          <MenuExample active={activeMenu === "example"} />
+          <MenuContact active={activeMenu === "contact"} />
+        </MenuContainer>
+      </HeaderContainer>
+    </Container>
+  );
+};
+
+export default Header;
