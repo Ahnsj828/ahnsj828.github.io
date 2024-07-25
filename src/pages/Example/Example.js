@@ -1,15 +1,7 @@
 import React from "react";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 
 const Example = () => {
-  return (
-    <div>
-      <Header />
-      ExamplePage
-      <Footer />
-    </div>
-  );
+  return <div>ExamplePage</div>;
 };
 
 export default Example;
