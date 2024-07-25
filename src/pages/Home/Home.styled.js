@@ -55,12 +55,14 @@ export const Meteoro = styled.div``;
 
 export const HomeTitles = styled.div`
   width: 25%;
+  height: 100%;
   padding-bottom: 2.5%;
   padding-left: 0.3%;
 `;
 
 export const HomeTitle = styled.div`
   width: 100%;
+  height: 100%;
   font-family: "Road-Rage", sans-serif;
   font-size: 6rem;
   line-height: 5rem;
