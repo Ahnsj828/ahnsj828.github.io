@@ -20,6 +20,7 @@ export const HomeSection = styled.section`
   justify-content: center;
   /* align-items: center; */
   align-items: flex-end;
+  /* margin-top: 3%; */
 `;
 
 export const HomeImgs = styled.div`
@@ -52,16 +53,16 @@ export const MoonShape = styled.div``;
 export const Meteoro = styled.div``;
 
 export const HomeTitles = styled.div`
+  width: 20%;
   padding-bottom: 2.5%;
   padding-left: 0.3%;
 `;
 
 export const HomeTitle = styled.div`
-  font-family: "Road-Rage", sans-serif; /* GlobalStyles에서 선언한 폰트 이름을 사용합니다. */
+  width: 100%;
+  font-family: "Road-Rage", sans-serif;
   font-size: 6rem;
-  line-height: 0.7;
+  line-height: 5rem;
   letter-spacing: 0.05rem;
   margin-bottom: 0.7rem;
-  animation: right1 0.4s 0.3s linear;
-  animation-fill-mode: both;
 `;

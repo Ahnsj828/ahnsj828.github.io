@@ -12,7 +12,7 @@ export const Container = styled.header`
   width: 100%;
   height: 115px;
   z-index: 10;
-  transition: all 0.5s ease;
+  /* transition: all 0.5s ease; */
 `;
 
 export const BgTop = styled.article`
@@ -42,7 +42,7 @@ export const HeaderContainer = styled.div`
   padding-top: 40px;
   height: 85px;
   z-index: 10;
-  transition: all 0.5s ease;
+  /* transition: all 0.5s ease; */
 `;
 
 export const Logo = styled.h1`
