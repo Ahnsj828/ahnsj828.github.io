@@ -130,7 +130,6 @@ const Home = () => {
 
   return (
     <HomeContain>
-      <Header />
       <HomeSection>
         <HomeImgs>
           <HomeBg ref={bgImageRef} src={homeBg} alt="Falling" />
@@ -146,7 +145,6 @@ const Home = () => {
           <HomeTitle ref={typewriterRef}></HomeTitle>
         </HomeTitles>
       </HomeSection>
-      <Footer />
     </HomeContain>
   );
 };

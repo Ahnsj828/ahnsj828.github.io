@@ -20,11 +20,12 @@ export const HomeSection = styled.section`
   justify-content: center;
   /* align-items: center; */
   align-items: flex-end;
-  /* margin-top: 3%; */
+  margin-top: 3%;
+  padding-left: 10%;
 `;
 
 export const HomeImgs = styled.div`
-  width: 45%;
+  width: 48%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -53,7 +54,7 @@ export const MoonShape = styled.div``;
 export const Meteoro = styled.div``;
 
 export const HomeTitles = styled.div`
-  width: 20%;
+  width: 25%;
   padding-bottom: 2.5%;
   padding-left: 0.3%;
 `;
