@@ -1,5 +1,5 @@
 const TestPage = () => {
-  return <>테스트페이지입니다.</>;
+  return <>안성진바보</>;
 };
 
 export default TestPage;
