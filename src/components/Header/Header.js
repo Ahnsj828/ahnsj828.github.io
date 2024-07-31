@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { gsap } from "gsap";
+import { useNavigate, useLocation } from "react-router-dom";
 import DesktopLT from "../../assets/images/Background_files/DesktopLT.png";
 import DesktopRT from "../../assets/images/Background_files/DesktopRT.png";
 import {
@@ -13,20 +12,32 @@ import {
   Span,
 } from "./Header.styled";
 
+const menuItems = [
+  { name: "Home", path: "/" },
+  { name: "introduce", path: "/introduce" },
+  { name: "project", path: "/project" },
+  { name: "example", path: "/example" },
+  { name: "contact", path: "/contact" },
+];
+
 const Header = () => {
   const navigate = useNavigate();
-  // const location = useLocation();
-  const [activeMenu, setActiveMenu] = useState();
+  const location = useLocation();
+  const [activeMenu, setActiveMenu] = useState("");
+
+  useEffect(() => {
+    const pathToMenu = menuItems.reduce((acc, item) => {
+      acc[item.path] = item.name;
+      return acc;
+    }, {});
+
+    setActiveMenu(pathToMenu[location.pathname] || "");
+  }, [location.pathname]);
 
   const handleMenuClick = (menu, path) => {
     setActiveMenu(menu);
     navigate(path);
   };
-
-  // GSAP을 사용하여 로고 애니메이션 적용
-  useEffect(() => {
-    gsap.from(".logo-back", { opacity: 0, duration: 1, delay: 0.5 });
-  }, []);
 
   return (
     <Container>
@@ -40,40 +51,19 @@ const Header = () => {
       </BgTop>
       <HeaderContainer>
         <Logo to="/">
-          Ahn
-          <span className="logo-back">.</span>
+          <b>Ahn</b>
+          <span>.</span>
         </Logo>
         <MenuContainer>
-          <MenuItem
-            $active={activeMenu === "home"}
-            onClick={() => handleMenuClick("home", "/")}
-          >
-            <Span>Home</Span>
-          </MenuItem>
-          <MenuItem
-            $active={activeMenu === "introduce"}
-            onClick={() => handleMenuClick("introduce", "/introduce")}
-          >
-            <Span>introduce</Span>
-          </MenuItem>
-          <MenuItem
-            $active={activeMenu === "project"}
-            onClick={() => handleMenuClick("project", "/project")}
-          >
-            <Span>project</Span>
-          </MenuItem>
-          <MenuItem
-            $active={activeMenu === "example"}
-            onClick={() => handleMenuClick("example", "/example")}
-          >
-            <Span>example</Span>
-          </MenuItem>
-          <MenuItem
-            $active={activeMenu === "contact"}
-            onClick={() => handleMenuClick("contact", "/contact")}
-          >
-            <Span>contact</Span>
-          </MenuItem>
+          {menuItems.map(({ name, path }) => (
+            <MenuItem
+              key={path}
+              $active={activeMenu === name}
+              onClick={() => handleMenuClick(name, path)}
+            >
+              <Span>{name}</Span>
+            </MenuItem>
+          ))}
         </MenuContainer>
       </HeaderContainer>
     </Container>
