@@ -5,8 +5,8 @@ export const Container = styled.header`
   background: #fff7e1;
   position: fixed;
   display: flex;
-  justify-content: space-between;
-  align-items: end;
+  /* justify-content: space-between; */
+  /* align-items: end; */
   align-items: center;
   top: 0;
   left: 0;
@@ -34,15 +34,15 @@ export const BgTop = styled.article`
 `;
 
 export const HeaderContainer = styled.div`
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   justify-content: space-between;
-  top: 0;
-  left: 0;
+  /* top: 0;
+  left: 0; */
   width: 100%;
-  padding-top: 40px;
+  margin-top: 40px;
   height: 85px;
-  z-index: 10;
+  /* z-index: 10; */
   /* transition: all 0.5s ease; */
 `;
 
