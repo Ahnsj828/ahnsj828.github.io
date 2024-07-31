@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.header`
@@ -45,7 +46,7 @@ export const HeaderContainer = styled.div`
   /* transition: all 0.5s ease; */
 `;
 
-export const Logo = styled.h1`
+export const Logo = styled(Link)`
   margin-left: 10%;
   font-family: "Kcc-Ganpan";
   font-size: 3rem;
@@ -73,10 +74,13 @@ export const MenuItem = styled.li`
   padding: 0 23px;
   text-transform: uppercase;
   cursor: pointer;
-  font-size: ${({ active }) => (active ? "1.3rem" : "1.2rem")};
+  /* font-size: ${({ active }) => (active ? "1.3rem" : "1.2rem")}; */
+  font-size: ${({ $active }) => ($active ? "1.3rem" : "1.2rem")};
   font-family: "Kcc-Ganpan";
-  color: ${({ active }) => (active ? "#ff5d2c" : "#352e1f")};
-  margin: ${({ active }) => (active ? "0 15px" : "0px")};
+  /* color: ${({ active }) => (active ? "#ff5d2c" : "#352e1f")}; */
+  color: ${({ $active }) => ($active ? "#ff5d2c" : "#352e1f")};
+  /* margin: ${({ active }) => (active ? "0 15px" : "0px")}; */
+  margin: ${({ $active }) => ($active ? "0 15px" : "0px")};
   &::before,
   &::after {
     content: "";
@@ -99,8 +103,10 @@ export const MenuItem = styled.li`
     transform: translate3d(-0.6em, 0, 0) rotate(45deg);
     border-right: 0.15em solid #ff5d2c;
     border-top: 0.15em solid #ff5d2c;
-    opacity: ${({ active }) => (active ? 1 : 0)};
-    left: ${({ active }) => (active ? "0.3em" : "-0.1em")};
+    /* opacity: ${({ active }) => (active ? 1 : 0)}; */
+    opacity: ${({ $active }) => ($active ? 1 : 0)};
+    /* left: ${({ active }) => (active ? "0.3em" : "-0.1em")}; */
+    left: ${({ $active }) => ($active ? "0.3em" : "-0.1em")};
   }
   &::after,
   & span::after {
@@ -110,8 +116,10 @@ export const MenuItem = styled.li`
     transform: translate3d(0.6em, 0, 0) rotate(45deg);
     border-left: 0.15em solid #ff5d2c;
     border-bottom: 0.15em solid #ff5d2c;
-    opacity: ${({ active }) => (active ? 1 : 0)};
-    right: ${({ active }) => (active ? "0.3em" : "-0.1em")};
+    /* opacity: ${({ active }) => (active ? 1 : 0)}; */
+    opacity: ${({ $active }) => ($active ? 1 : 0)};
+    /* right: ${({ active }) => (active ? "0.3em" : "-0.1em")}; */
+    right: ${({ $active }) => ($active ? "0.3em" : "-0.1em")};
   }
   &:hover::before,
   &:hover span::before {
