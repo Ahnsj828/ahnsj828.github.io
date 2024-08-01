@@ -143,6 +143,7 @@ const Home = () => {
           <HomeTitle ref={typewriterRef}></HomeTitle>
         </HomeTitles>
       </HomeSection>
+      <div style={{ height: "1000vh" }}></div>
     </HomeContain>
   );
 };

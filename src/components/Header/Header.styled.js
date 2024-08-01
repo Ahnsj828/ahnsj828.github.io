@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.header`
   background: #fff7e1;
   position: fixed;
   display: flex;
-  justify-content: space-between;
-  align-items: end;
+  /* justify-content: space-between; */
+  /* align-items: end; */
   align-items: center;
   top: 0;
   left: 0;
@@ -33,26 +34,37 @@ export const BgTop = styled.article`
 `;
 
 export const HeaderContainer = styled.div`
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   justify-content: space-between;
-  top: 0;
-  left: 0;
+  /* top: 0;
+  left: 0; */
   width: 100%;
-  padding-top: 40px;
+  margin-top: 40px;
   height: 85px;
-  z-index: 10;
+  /* z-index: 10; */
   /* transition: all 0.5s ease; */
 `;
 
-export const Logo = styled.h1`
+export const Logo = styled(Link)`
   margin-left: 10%;
-  font-family: "Kcc-Ganpan";
-  font-size: 3rem;
-  font: normal 3rem/-0.3 "Kcc-Ganpan";
-  color: #201c14;
-  cursor: pointer;
-  .logo-back {
+
+  b {
+    width: 100px;
+    font-family: "Kcc-Ganpan";
+    font-size: 3rem;
+    line-height: 4rem;
+    color: #201c14;
+    cursor: pointer;
+  }
+  span {
+    padding-left: 0.3rem;
+    font-family: "Kcc-Ganpan";
+    font-size: 4rem;
+    line-height: 2rem;
+    height: auto;
+    display: inline-block;
+    cursor: pointer;
     color: #ff5d2c;
   }
 `;
@@ -73,10 +85,10 @@ export const MenuItem = styled.li`
   padding: 0 23px;
   text-transform: uppercase;
   cursor: pointer;
-  font-size: ${({ active }) => (active ? "1.3rem" : "1.2rem")};
+  font-size: ${({ $active }) => ($active ? "1.3rem" : "1.2rem")};
   font-family: "Kcc-Ganpan";
-  color: ${({ active }) => (active ? "#ff5d2c" : "#352e1f")};
-  margin: ${({ active }) => (active ? "0 15px" : "0px")};
+  color: ${({ $active }) => ($active ? "#ff5d2c" : "#352e1f")};
+  margin: ${({ $active }) => ($active ? "0 15px" : "0px")};
   &::before,
   &::after {
     content: "";
@@ -99,8 +111,8 @@ export const MenuItem = styled.li`
     transform: translate3d(-0.6em, 0, 0) rotate(45deg);
     border-right: 0.15em solid #ff5d2c;
     border-top: 0.15em solid #ff5d2c;
-    opacity: ${({ active }) => (active ? 1 : 0)};
-    left: ${({ active }) => (active ? "0.3em" : "-0.1em")};
+    opacity: ${({ $active }) => ($active ? 1 : 0)};
+    left: ${({ $active }) => ($active ? "0.3em" : "-0.1em")};
   }
   &::after,
   & span::after {
@@ -110,8 +122,8 @@ export const MenuItem = styled.li`
     transform: translate3d(0.6em, 0, 0) rotate(45deg);
     border-left: 0.15em solid #ff5d2c;
     border-bottom: 0.15em solid #ff5d2c;
-    opacity: ${({ active }) => (active ? 1 : 0)};
-    right: ${({ active }) => (active ? "0.3em" : "-0.1em")};
+    opacity: ${({ $active }) => ($active ? 1 : 0)};
+    right: ${({ $active }) => ($active ? "0.3em" : "-0.1em")};
   }
   &:hover::before,
   &:hover span::before {
