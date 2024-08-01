@@ -24,7 +24,7 @@ export const HomeContain = styled.div`
 export const HomeSection = styled.section`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   width: 90%;
   /* height: 80%; */
   /* align-items: center; */
@@ -45,14 +45,14 @@ export const HomeImgs = styled.div`
 `;
 
 export const HomeBg = styled.img`
-  width: 100%;
+  width: 50%;
   height: auto;
   object-fit: cover;
   display: inline-block;
 `;
 
 export const HomeImg = styled.img`
-  width: 30%; /* 원하는 너비로 조절 */
+  width: 10%; /* 원하는 너비로 조절 */
   height: auto; /* 비율에 맞게 높이 자동 조정 */
   /* position: absolute;
   bottom: 0;
@@ -77,7 +77,7 @@ export const HomeImg = styled.img`
 export const HomeTitles = styled.div`
   width: 30%;
   height: 100%;
-  padding-top: 10%;
+  padding-top: 13%;
   padding-left: 0.3%;
   border: 1px solid #f00;
 `;

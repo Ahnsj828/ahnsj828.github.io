@@ -18,12 +18,16 @@ gsap.registerPlugin(Draggable, TextPlugin);
 
 const Home = () => {
   const bgImageRef = useRef(null);
-  const typewriterRef = useRef(null);
+  const typewriterRef1 = useRef(null);
+  const typewriterRef2 = useRef(null);
+  const typewriterRef3 = useRef(null);
   const movingImgRef = useRef(null);
 
   useEffect(() => {
     const bgImage = bgImageRef.current;
-    const typewriter = typewriterRef.current;
+    const typewriter1 = typewriterRef1.current;
+    const typewriter2 = typewriterRef2.current;
+    const typewriter3 = typewriterRef3.current;
     const movingImg = movingImgRef.current;
 
     // 초기 위치 설정
@@ -46,23 +50,52 @@ const Home = () => {
       .to(bgImage, { duration: 0.1, y: 0 })
       .to(bgImage, { duration: 0.2, y: -80 })
       .to(bgImage, { duration: 0.2, y: 0 })
-      .call(startTypewriterAnimation) // 타이핑 애니메이션 시작을 호출
-      .call(startMovingImgAnimation); // 이미지 이동 애니메이션 시작을 호출
+      .call(startTypewriterAnimations) // 타이핑 애니메이션 시작
+      .call(startMovingImgAnimation); // 이미지 이동 애니메이션 시작
 
-    function startTypewriterAnimation() {
-      // 타이핑 효과 애니메이션 정의
-      const textBr = `<br>`;
-      const text = "Dream of" + textBr + "Becoming" + textBr + "A Developer";
+    function startTypewriterAnimations() {
+      // 타이핑 애니메이션 타임라인 정의
       const tlTypewriter = gsap.timeline({ defaults: { ease: "power2.out" } });
-      tlTypewriter.to(typewriter, {
-        opacity: 1,
-        duration: text.length * 0.2,
-        text: {
-          value: text,
-          delimiter: "",
-          padSpace: true, // 각 글자 사이에 공백 추가
-        },
-      });
+
+      const typewriterDuration = 1.5; // 타이핑 효과의 지속 시간 (초 단위)
+      const delayBetweenTexts = 0.1; // 각 타이핑 애니메이션 사이의 지연 시간 (초 단위)
+
+      tlTypewriter
+        .to(typewriter1, {
+          opacity: 1,
+          duration: typewriterDuration, // 텍스트 애니메이션 지속 시간
+          text: {
+            value: "Dream of",
+            delimiter: "",
+            padSpace: true,
+          },
+        })
+        .to(
+          typewriter2,
+          {
+            opacity: 1,
+            duration: typewriterDuration, // 텍스트 애니메이션 지속 시간
+            text: {
+              value: "Becoming",
+              delimiter: "",
+              padSpace: true,
+            },
+          },
+          `+=${delayBetweenTexts}` // 이전 애니메이션이 끝난 후 지연 시간
+        )
+        .to(
+          typewriter3,
+          {
+            opacity: 1,
+            duration: typewriterDuration, // 텍스트 애니메이션 지속 시간
+            text: {
+              value: "A Developer",
+              delimiter: "",
+              padSpace: true,
+            },
+          },
+          `+=${delayBetweenTexts}` // 이전 애니메이션이 끝난 후 지연 시간
+        );
     }
 
     function startMovingImgAnimation() {
@@ -103,11 +136,11 @@ const Home = () => {
     <HomeContain>
       <HomeSection>
         <HomeBg ref={bgImageRef} src={homeBg} alt="Falling" />
-        {/* <HomeImgs>
-        </HomeImgs> */}
         <HomeImg ref={movingImgRef} src={homeW2} />
         <HomeTitles>
-          <HomeTitle ref={typewriterRef}></HomeTitle>
+          <HomeTitle ref={typewriterRef1}></HomeTitle>
+          <HomeTitle ref={typewriterRef2}></HomeTitle>
+          <HomeTitle ref={typewriterRef3}></HomeTitle>
         </HomeTitles>
       </HomeSection>
     </HomeContain>
