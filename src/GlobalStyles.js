@@ -14,6 +14,15 @@ const GlobalStyles = createGlobalStyle`
     color: inherit;
     text-decoration: none;
   }
+  /* 추가한거 */
+  body {
+    width: 100vw;
+    height:100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
 `;
 
 export default GlobalStyles;

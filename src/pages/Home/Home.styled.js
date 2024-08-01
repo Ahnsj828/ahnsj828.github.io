@@ -1,76 +1,93 @@
 import styled from "styled-components";
-// import createGlobalStyle from "styled-components";
 
 // < styled components >
 export const HomeContain = styled.div`
-  width: 100%;
-  max-width: 80%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  /* width: 100%;
+  height: 100vh;
+  max-width: 80%;
+  max-height: 80vh;
+  margin: auto; */
+  width: 80vw;
+  /* max-width: 80vw; */
+  height: 100vh;
   overflow-x: hidden;
-  -ms-overflow-style: none; /* 인터넷 익스플로러 */
-  scrollbar-width: none; /* 파이어폭스 */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
   }
 `;
 
 export const HomeSection = styled.section`
-  width: 100%;
-  /* height: 80%; */
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  align-items: flex-end;
-  margin-top: 3%;
-  padding-left: 10%;
-`;
-
-export const HomeImgs = styled.div`
-  width: 48%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 90%;
+  /* height: 80%; */
+  /* align-items: center; */
+  /* margin-top: 3%;
+  padding-left: 10%; */
+  margin-top: 3%;
+  margin-left: 13%;
+  border: 1px solid #f00;
+`;
+
+export const HomeImgs = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  /* height: 100%; */
+  border: 1px solid #f00;
 `;
 
 export const HomeBg = styled.img`
   width: 100%;
-  height: auto; /* 원하는 높이로 설정 */
-  object-fit: cover; /* 이미지가 너비에 맞게 높이가 조정되도록 함 */
+  height: auto;
+  object-fit: cover;
+  display: inline-block;
 `;
 
-// HomeSky = noite
-export const HomeSky = styled.div``;
+export const HomeImg = styled.img`
+  width: 30%; /* 원하는 너비로 조절 */
+  height: auto; /* 비율에 맞게 높이 자동 조정 */
+  /* position: absolute;
+  bottom: 0;
+  right: 0; */
+`;
 
-// Star = constelacao
-export const Star = styled.div``;
+// // HomeSky = noite
+// export const HomeSky = styled.div``;
 
-// Moon = lua
-export const Moon = styled.div``;
+// // Star = constelacao
+// export const Star = styled.div``;
 
-// MoonShape = textura
-export const MoonShape = styled.div``;
+// // Moon = lua
+// export const Moon = styled.div``;
 
-// Meteoro = chuvaMeteoro
-export const Meteoro = styled.div``;
+// // MoonShape = textura
+// export const MoonShape = styled.div``;
+
+// // Meteoro = chuvaMeteoro
+// export const Meteoro = styled.div``;
 
 export const HomeTitles = styled.div`
-  width: 25%;
+  width: 30%;
   height: 100%;
-  padding-bottom: 2.5%;
+  padding-top: 10%;
   padding-left: 0.3%;
+  border: 1px solid #f00;
 `;
 
 export const HomeTitle = styled.div`
   width: 100%;
+  /* height: auto; */
   height: 100%;
-  font-family: "Road-Rage", sans-serif;
   font-size: 6rem;
   line-height: 5rem;
   letter-spacing: 0.05rem;
-  margin-bottom: 0.7rem;
+  font-family: "Road-Rage", sans-serif;
 `;
