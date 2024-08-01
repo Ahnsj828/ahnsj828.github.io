@@ -5,15 +5,12 @@ export const Container = styled.header`
   background: #fff7e1;
   position: fixed;
   display: flex;
-  /* justify-content: space-between; */
-  /* align-items: end; */
-  align-items: center;
+  align-items: start;
   top: 0;
   left: 0;
   width: 100%;
-  height: 115px;
+  /* height: 115px; */
   z-index: 10;
-  /* transition: all 0.5s ease; */
 `;
 
 export const BgTop = styled.article`
@@ -34,24 +31,20 @@ export const BgTop = styled.article`
 `;
 
 export const HeaderContainer = styled.div`
-  /* position: fixed; */
   display: flex;
   justify-content: space-between;
-  /* top: 0;
-  left: 0; */
+  align-items: center;
   width: 100%;
   margin-top: 40px;
-  height: 85px;
-  /* z-index: 10; */
-  /* transition: all 0.5s ease; */
+  /* height: 85px; */
 `;
 
 export const Logo = styled(Link)`
   margin-left: 10%;
+  font-family: "Kcc-Ganpan";
 
   b {
     width: 100px;
-    font-family: "Kcc-Ganpan";
     font-size: 3rem;
     line-height: 4rem;
     color: #201c14;
@@ -74,7 +67,6 @@ export const MenuContainer = styled.ul`
   display: flex;
   align-items: center;
   margin-right: 10%;
-  margin-bottom: 10px;
   gap: 10px;
 `;
 
@@ -85,7 +77,7 @@ export const MenuItem = styled.li`
   padding: 0 23px;
   text-transform: uppercase;
   cursor: pointer;
-  font-size: ${({ $active }) => ($active ? "1.3rem" : "1.2rem")};
+  font-size: ${({ $active }) => ($active ? "1.4rem" : "1.2rem")};
   font-family: "Kcc-Ganpan";
   color: ${({ $active }) => ($active ? "#ff5d2c" : "#352e1f")};
   margin: ${({ $active }) => ($active ? "0 15px" : "0px")};
