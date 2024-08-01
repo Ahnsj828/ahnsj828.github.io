@@ -1,73 +1,15 @@
-// import React, { useEffect, useRef } from "react";
-// import Header from "../../components/Header/Header";
-// import Footer from "../../components/Footer/Footer";
-// import gsap from "gsap";
-// import homeBg from "../../assets/images/Section/Home/homeBg.png";
-// import {
-//   HomeContain,
-//   HomeSection, // 수정: HomeSection 추가
-//   HomeImgs,
-//   HomeTitles,
-//   HomeBg,
-// } from "./Home.styled";
-
-// const Home = () => {
-//   const bgImageRef = useRef(null);
-
-//   useEffect(() => {
-//     const bgImage = bgImageRef.current;
-
-//     // 초기 위치 설정
-//     gsap.set(bgImage, { y: -70, opacity: 0 });
-
-//     // Timeline 생성
-//     const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
-
-//     // 애니메이션 정의
-//     tl.to(bgImage, { duration: 0.2, y: 0, opacity: 1 })
-//       .to(bgImage, { duration: 0.3, y: -35, repeat: 1, yoyo: true })
-//       .to(bgImage, { duration: 0.2, y: 0 })
-//       .to(bgImage, { duration: 0.3, y: -17 })
-//       .to(bgImage, { duration: 0.1, y: 0 });
-
-//     // Cleanup 함수
-//     return () => {
-//       tl.kill(); // 애니메이션 정리
-//     };
-//   }, []);
-
-//   return (
-//     <HomeContain>
-//       <Header />
-//       <HomeSection>
-//         <HomeImgs>
-//           <HomeBg ref={bgImageRef} src={homeBg} alt="Falling" />
-//         </HomeImgs>
-//         <HomeTitles></HomeTitles>
-//       </HomeSection>
-//       <Footer />
-//     </HomeContain>
-//   );
-// };
-
-// export default Home;
-
-// ========================================================
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap"; // GSAP import
 import { Draggable, TextPlugin } from "gsap/all"; // Draggable 및 TextPlugin import
 import homeBg from "../../assets/images/Section/Home/homeBg.png";
+import homeW2 from "../../assets/images/Section/Home/homeW2.png";
 import {
   HomeContain,
   HomeSection,
   HomeImgs,
   HomeTitles,
   HomeBg,
-  HomeSky,
-  Star,
-  Moon,
-  MoonShape,
-  Meteoro,
+  HomeImg,
   HomeTitle,
 } from "./Home.styled";
 
@@ -76,14 +18,21 @@ gsap.registerPlugin(Draggable, TextPlugin);
 
 const Home = () => {
   const bgImageRef = useRef(null);
-  const typewriterRef = useRef(null);
+  const typewriterRef1 = useRef(null);
+  const typewriterRef2 = useRef(null);
+  const typewriterRef3 = useRef(null);
+  const movingImgRef = useRef(null);
 
   useEffect(() => {
     const bgImage = bgImageRef.current;
-    const typewriter = typewriterRef.current;
+    const typewriter1 = typewriterRef1.current;
+    const typewriter2 = typewriterRef2.current;
+    const typewriter3 = typewriterRef3.current;
+    const movingImg = movingImgRef.current;
 
     // 초기 위치 설정
     gsap.set(bgImage, { y: -500, opacity: 0 });
+    gsap.set(movingImg, { x: "100%", opacity: 1 });
 
     // Draggable을 이용한 배경 이미지 애니메이션 설정
     const draggable = Draggable.create(bgImage, {
@@ -101,22 +50,79 @@ const Home = () => {
       .to(bgImage, { duration: 0.1, y: 0 })
       .to(bgImage, { duration: 0.2, y: -80 })
       .to(bgImage, { duration: 0.2, y: 0 })
-      .call(startTypewriterAnimation); // 타이핑 애니메이션 시작을 호출
+      .call(startTypewriterAnimations) // 타이핑 애니메이션 시작
+      .call(startMovingImgAnimation); // 이미지 이동 애니메이션 시작
 
-    function startTypewriterAnimation() {
-      // 타이핑 효과 애니메이션 정의
-      const textBr = `<br>`;
-      const text = "Dream of" + textBr + "Becoming" + textBr + "A Developer";
+    function startTypewriterAnimations() {
+      // 타이핑 애니메이션 타임라인 정의
       const tlTypewriter = gsap.timeline({ defaults: { ease: "power2.out" } });
-      tlTypewriter.to(typewriter, {
-        opacity: 1,
-        duration: text.length * 0.2,
-        text: {
-          value: text,
-          delimiter: "",
-          padSpace: true, // 각 글자 사이에 공백 추가
-        },
-      });
+
+      const typewriterDuration = 1.5; // 타이핑 효과의 지속 시간 (초 단위)
+      const delayBetweenTexts = 0.1; // 각 타이핑 애니메이션 사이의 지연 시간 (초 단위)
+
+      tlTypewriter
+        .to(typewriter1, {
+          opacity: 1,
+          duration: typewriterDuration, // 텍스트 애니메이션 지속 시간
+          text: {
+            value: "Dream of",
+            delimiter: "",
+            padSpace: true,
+          },
+        })
+        .to(
+          typewriter2,
+          {
+            opacity: 1,
+            duration: typewriterDuration, // 텍스트 애니메이션 지속 시간
+            text: {
+              value: "Becoming",
+              delimiter: "",
+              padSpace: true,
+            },
+          },
+          `+=${delayBetweenTexts}` // 이전 애니메이션이 끝난 후 지연 시간
+        )
+        .to(
+          typewriter3,
+          {
+            opacity: 1,
+            duration: typewriterDuration, // 텍스트 애니메이션 지속 시간
+            text: {
+              value: "A Developer",
+              delimiter: "",
+              padSpace: true,
+            },
+          },
+          `+=${delayBetweenTexts}` // 이전 애니메이션이 끝난 후 지연 시간
+        );
+    }
+
+    function startMovingImgAnimation() {
+      // 이미지 이동 애니메이션 정의
+      const startX = "100%"; // 시작 위치 (화면의 오른쪽)
+      const endX = "-100%"; // 끝나는 위치 (화면의 왼쪽)
+      const duration = 10; // 애니메이션 전체 시간
+
+      const tlMovingImg = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+      tlMovingImg
+        .to(movingImg, {
+          duration: duration,
+          x: endX,
+          opacity: 1,
+          ease: "power2.linear",
+        })
+        .to(movingImg, {
+          duration: 0.5,
+          opacity: 0,
+          ease: "power2.out",
+        })
+        .set(movingImg, { x: startX }) // 애니메이션이 끝나면 다시 시작 위치로 설정
+        .to(movingImg, {
+          duration: 0.5,
+          opacity: 1,
+          ease: "power2.in",
+        });
     }
 
     // Cleanup 함수
@@ -129,21 +135,14 @@ const Home = () => {
   return (
     <HomeContain>
       <HomeSection>
-        <HomeImgs>
-          <HomeBg ref={bgImageRef} src={homeBg} alt="Falling" />
-          <HomeSky>
-            <Star></Star>
-            <Moon>
-              <MoonShape></MoonShape>
-            </Moon>
-            <Meteoro></Meteoro>
-          </HomeSky>
-        </HomeImgs>
+        <HomeBg ref={bgImageRef} src={homeBg} alt="Falling" />
+        <HomeImg ref={movingImgRef} src={homeW2} />
         <HomeTitles>
-          <HomeTitle ref={typewriterRef}></HomeTitle>
+          <HomeTitle ref={typewriterRef1}></HomeTitle>
+          <HomeTitle ref={typewriterRef2}></HomeTitle>
+          <HomeTitle ref={typewriterRef3}></HomeTitle>
         </HomeTitles>
       </HomeSection>
-      <div style={{ height: "1000vh" }}></div>
     </HomeContain>
   );
 };
