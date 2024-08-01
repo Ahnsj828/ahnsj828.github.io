@@ -10,7 +10,12 @@ export const HomeContain = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  /* overflow: hidden; */
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const HomeSection = styled.section`
