@@ -70,7 +70,20 @@ import {
 } from "./Introduce.styled";
 
 const Introduce = () => {
-  const iconsList = ["CSS3", "Figma", "Firebase", "github"];
+  const iconsList = [
+    "html5",
+    "css3",
+    "sass",
+    "javascript",
+    "react",
+    "typescript",
+    "firebase",
+    "git",
+    "github",
+    "figma",
+    "illustrator",
+    "photoshop",
+  ];
 
   return (
     <IntroContain>

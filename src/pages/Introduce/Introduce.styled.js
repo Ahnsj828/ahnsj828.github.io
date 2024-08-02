@@ -41,13 +41,14 @@ export const ToolIconBox = styled.div`
   width: 40%;
   height: 100%;
   background: wheat;
+  gap: 10%;
 `;
 
 export const ToolIconTitle = styled.p`
   width: 90%;
   /* height: 100%; */
   line-height: 40px;
-  border: 1px solid #f00;
+  /* border: 1px solid #f00; */
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
@@ -58,9 +59,14 @@ export const ToolIconTitle = styled.p`
 `;
 
 export const ToolIcons = styled.span`
-  width: 100%;
+  width: 90%;
   height: calc(100% - 40px);
-  border: 1px solid greenyellow;
+  height: 100%;
+  /* border: 1px solid greenyellow; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  padding-bottom: 8.65rem;
 `;
 
 // < props로 전달하는 방법 >
@@ -74,11 +80,39 @@ export const ToolIcons = styled.span`
 // `;
 
 export const ToolIcon = styled.div`
-  width: auto; // 너비는 자동 조절
-  height: 50px; // 높이를 50px로 고정
+  /* width: 50px; */
+  display: inline-block;
+  height: 50px;
+  height: 3.125rem;
+  height: 65px;
+  height: 4.0625rem;
+  width: 4.0625rem;
   background: url(${(props) => props.$imgUrl}) center/contain no-repeat;
-  background-size: contain; // 이미지 비율에 맞춰서 조절
+  /* margin-right: 1%; */
+
+  /* 기본 비율 (1:1) */
+  width: ${(props) => (props.$ratio ? `calc(${props.$ratio} * 50px)` : "50px")};
+
+  /* 각 이미지에 맞는 비율 설정 */
+  &:nth-child(1) {
+    width: calc(5rem * 4 / 5);
+  } /* firebase */
+  &:nth-child(7) {
+    width: calc(4.0625rem * 32 / 11);
+  } /* firebase */
+
+  &:nth-child(8) {
+    width: calc(3.2rem * 24 / 10);
+  } /* git */
 `;
+// &:nth-child(3) {
+//   margin-right: 3rem;
+// }
+// // sass
+// &:nth-child(9) {
+//   margin-right: 3rem;
+// }
+//  github
 
 export const ToolIntroduce = styled.div`
   width: 60%;
