@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    font-family: "KCC-Ganpan";
   }
 
 `;
