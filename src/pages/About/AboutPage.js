@@ -8,7 +8,6 @@ import "swiper/css/navigation";
 
 import "./AboutPage.css";
 import {
-  AboutContain,
   AboutSection,
   MyPic,
   AboutMe,
@@ -39,27 +38,25 @@ const AboutPage = () => {
 
   return (
     <BasicLayout>
-      <AboutContain>
-        <AboutSection>
-          <MyPic></MyPic>
-          <AboutMe>
-            <ToolIconBox>
-              <ToolIconTitle>
-                My Skill<b>.</b>
-              </ToolIconTitle>
-              <ToolIcons>
-                {iconsList.map((iconName, idx) => {
-                  let imageUrl = require("../../assets/images/Section/Introduce/" +
-                    `${iconName}-icon` +
-                    ".png");
-                  return <ToolIcon key={idx} $imgUrl={imageUrl} />;
-                })}
-              </ToolIcons>
-            </ToolIconBox>
-            <ToolIntroduce></ToolIntroduce>
-          </AboutMe>
-        </AboutSection>
-      </AboutContain>
+      <AboutSection>
+        <MyPic></MyPic>
+        <AboutMe>
+          <ToolIconBox>
+            <ToolIconTitle>
+              My Skill<b>.</b>
+            </ToolIconTitle>
+            <ToolIcons>
+              {iconsList.map((iconName, idx) => {
+                let imageUrl = require("../../assets/images/Section/Introduce/" +
+                  `${iconName}-icon` +
+                  ".png");
+                return <ToolIcon key={idx} $imgUrl={imageUrl} />;
+              })}
+            </ToolIcons>
+          </ToolIconBox>
+          <ToolIntroduce></ToolIntroduce>
+        </AboutMe>
+      </AboutSection>
     </BasicLayout>
   );
 };
