@@ -1,22 +1,23 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap"; // GSAP import
 import { Draggable, TextPlugin } from "gsap/all"; // Draggable 및 TextPlugin import
-import homeBg from "../../assets/images/Section/Home/homeBg.png";
-import homeW2 from "../../assets/images/Section/Home/homeW2.png";
+import mainBg from "../../assets/images/Section/Main/mainBg.png";
+import mainW2 from "../../assets/images/Section/Main/mainW2.png";
 import {
-  HomeContain,
-  HomeSection,
-  HomeImgs,
-  HomeTitles,
-  HomeBg,
-  HomeImg,
-  HomeTitle,
-} from "./Home.styled";
+  MainContain,
+  MainSection,
+  MainImgs,
+  MainTitles,
+  MainBg,
+  MainImg,
+  MainTitle,
+} from "./MainPage.styled";
+import BasicLayout from "../../layouts/BasicLayout";
 
 // 필요한 플러그인 등록
 gsap.registerPlugin(Draggable, TextPlugin);
 
-const Home = () => {
+const MainPage = () => {
   const bgImageRef = useRef(null);
   const typewriterRef1 = useRef(null);
   const typewriterRef2 = useRef(null);
@@ -38,7 +39,7 @@ const Home = () => {
     const draggable = Draggable.create(bgImage, {
       type: "y", // 수직 이동 설정
       edgeResistance: 0.65, // 가장자리 저항 설정
-      bounds: HomeSection, // 움직임 제한할 요소 설정
+      bounds: MainSection, // 움직임 제한할 요소 설정
       throwProps: true, // 던지기 효과 활성화
     });
 
@@ -133,18 +134,20 @@ const Home = () => {
   }, []);
 
   return (
-    <HomeContain>
-      <HomeSection>
-        <HomeBg ref={bgImageRef} src={homeBg} alt="Falling" />
-        <HomeImg ref={movingImgRef} src={homeW2} />
-        <HomeTitles>
-          <HomeTitle ref={typewriterRef1}></HomeTitle>
-          <HomeTitle ref={typewriterRef2}></HomeTitle>
-          <HomeTitle ref={typewriterRef3}></HomeTitle>
-        </HomeTitles>
-      </HomeSection>
-    </HomeContain>
+    <BasicLayout>
+      <MainContain>
+        <MainSection>
+          <MainBg ref={bgImageRef} src={mainBg} alt="Falling" />
+          <MainImg ref={movingImgRef} src={mainW2} />
+          <MainTitles>
+            <MainTitle ref={typewriterRef1}></MainTitle>
+            <MainTitle ref={typewriterRef2}></MainTitle>
+            <MainTitle ref={typewriterRef3}></MainTitle>
+          </MainTitles>
+        </MainSection>
+      </MainContain>
+    </BasicLayout>
   );
 };
 
-export default Home;
+export default MainPage;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 // < styled components >
-export const HomeContain = styled.div`
+export const MainContain = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,7 @@ export const HomeContain = styled.div`
   }
 `;
 
-export const HomeSection = styled.section`
+export const MainSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: start;
@@ -35,7 +35,7 @@ export const HomeSection = styled.section`
   border: 1px solid #f00;
 `;
 
-export const HomeImgs = styled.div`
+export const MainImgs = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,14 +44,14 @@ export const HomeImgs = styled.div`
   border: 1px solid #f00;
 `;
 
-export const HomeBg = styled.img`
+export const MainBg = styled.img`
   width: 50%;
   height: auto;
   object-fit: cover;
   display: inline-block;
 `;
 
-export const HomeImg = styled.img`
+export const MainImg = styled.img`
   width: 10%; /* 원하는 너비로 조절 */
   height: auto; /* 비율에 맞게 높이 자동 조정 */
   /* position: absolute;
@@ -74,7 +74,7 @@ export const HomeImg = styled.img`
 // // Meteoro = chuvaMeteoro
 // export const Meteoro = styled.div``;
 
-export const HomeTitles = styled.div`
+export const MainTitles = styled.div`
   width: 30%;
   height: 100%;
   padding-top: 13%;
@@ -82,7 +82,7 @@ export const HomeTitles = styled.div`
   border: 1px solid #f00;
 `;
 
-export const HomeTitle = styled.div`
+export const MainTitle = styled.div`
   width: 100%;
   /* height: auto; */
   height: 100%;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-export const IntroContain = styled.div`
+export const AboutContain = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,7 +7,7 @@ export const IntroContain = styled.div`
   height: 100vh;
 `;
 
-export const IntroSection = styled.section`
+export const AboutSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: start;
