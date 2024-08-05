@@ -1,11 +1,11 @@
 import styled from "styled-components";
-export const AboutContain = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80vw;
-  height: 100vh;
-`;
+// export const AboutContain = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 80vw;
+//   height: 100vh;
+// `;
 
 export const AboutSection = styled.section`
   display: flex;

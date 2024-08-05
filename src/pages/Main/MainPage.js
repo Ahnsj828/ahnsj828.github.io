@@ -4,9 +4,8 @@ import { Draggable, TextPlugin } from "gsap/all"; // Draggable 및 TextPlugin im
 import mainBg from "../../assets/images/Section/Main/mainBg.png";
 import mainW2 from "../../assets/images/Section/Main/mainW2.png";
 import {
-  MainContain,
   MainSection,
-  MainImgs,
+  // MainImgs,
   MainTitles,
   MainBg,
   MainImg,
@@ -135,17 +134,15 @@ const MainPage = () => {
 
   return (
     <BasicLayout>
-      <MainContain>
-        <MainSection>
-          <MainBg ref={bgImageRef} src={mainBg} alt="Falling" />
-          <MainImg ref={movingImgRef} src={mainW2} />
-          <MainTitles>
-            <MainTitle ref={typewriterRef1}></MainTitle>
-            <MainTitle ref={typewriterRef2}></MainTitle>
-            <MainTitle ref={typewriterRef3}></MainTitle>
-          </MainTitles>
-        </MainSection>
-      </MainContain>
+      <MainSection>
+        <MainBg ref={bgImageRef} src={mainBg} alt="Falling" />
+        <MainImg ref={movingImgRef} src={mainW2} />
+        <MainTitles>
+          <MainTitle ref={typewriterRef1}></MainTitle>
+          <MainTitle ref={typewriterRef2}></MainTitle>
+          <MainTitle ref={typewriterRef3}></MainTitle>
+        </MainTitles>
+      </MainSection>
     </BasicLayout>
   );
 };
