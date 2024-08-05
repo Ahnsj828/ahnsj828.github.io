@@ -1,13 +1,13 @@
 import React from "react";
 
-import { ContactContain } from "./ContactPage.styled";
+import { ContactSection } from "./ContactPage.styled";
 
 import BasicLayout from "../../layouts/BasicLayout";
 
 const ContactPage = () => {
   return (
     <BasicLayout>
-      <ContactContain></ContactContain>
+      <ContactSection></ContactSection>
     </BasicLayout>
   );
 };

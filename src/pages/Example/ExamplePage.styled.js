@@ -1,8 +1,9 @@
 import styled from "styled-components";
-export const ExampleContain = styled.div`
+export const ExampleSection = styled.section`
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 80vw;
-  height: 100vh;
+  align-items: start;
+  margin-top: 5%;
+  width: 85%;
+  height: 70%;
 `;
