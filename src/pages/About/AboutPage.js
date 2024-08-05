@@ -47,7 +47,8 @@ const AboutPage = () => {
             </ToolIconTitle>
             <ToolIcons>
               {iconsList.map((iconName, idx) => {
-                let imageUrl = require("../../assets/images/Section/Introduce/" +
+                // let imageUrl = require("../../assets/images/Section/Introduce/" +
+                let imageUrl = require("../../assets/images/Section/About/" +
                   `${iconName}-icon` +
                   ".png");
                 return <ToolIcon key={idx} $imgUrl={imageUrl} />;
