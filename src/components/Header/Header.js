@@ -14,10 +14,10 @@ import {
 
 const menuItems = [
   { name: "Home", path: "/" },
-  { name: "introduce", path: "/introduce" },
-  { name: "project", path: "/project" },
-  { name: "example", path: "/example" },
-  { name: "contact", path: "/contact" },
+  { name: "About", path: "/about" },
+  { name: "Project", path: "/project" },
+  { name: "Example", path: "/example" },
+  { name: "Contact", path: "/contact" },
 ];
 
 const Header = () => {
