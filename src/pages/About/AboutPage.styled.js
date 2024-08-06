@@ -127,17 +127,18 @@ import styled from "styled-components";
 
 export const AboutSection = styled.section`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: start;
-  margin-top: 5%;
-  width: 85%;
+  /* margin-top: 3%; */
+  width: 70%;
   height: 70%;
 `;
 
 export const TabBtns = styled.nav`
   width: 100%;
   width: calc(100% - 1rem);
-  padding: 2rem 0 0 0;
+  /* padding: 2rem 0 0 0; */
   margin: 0 0.5rem;
   overflow-x: auto;
   white-space: nowrap;
@@ -218,52 +219,49 @@ export const Tab = styled.button`
   &.active:focus span {
     outline: 1px solid rgba(255, 255, 255, 0.7);
   }
-  &:nth-of-type(1),
-  .tab-content ul li:nth-of-type(1) {
-    --background: #640d6b;
+  &:nth-of-type(1) {
+    --background: #8a2c7a; /* #640d6b보다 밝은 색상 */
   }
-  &:nth-of-type(2),
-  .tab-content ul li:nth-of-type(2) {
-    --background: #b51b75;
+  &:nth-of-type(2) {
+    --background: #d74b94; /* #b51b75보다 밝은 색상 */
   }
-  &:nth-of-type(3),
-  .tab-content ul li:nth-of-type(3) {
-    --background: #af4d98;
+  &:nth-of-type(3) {
+    --background: #c85eaf; /* #af4d98보다 밝은 색상 */
   }
-  &:nth-of-type(4),
-  .tab-content ul li:nth-of-type(4) {
-    --background: #d66ba0;
+  &:nth-of-type(4) {
+    --background: #f08eb4; /* #d66ba0보다 밝은 색상 */
   }
-  &:nth-of-type(5),
-  .tab-content ul li:nth-of-type(5) {
-    --background: #e5a9a9;
+  &:nth-of-type(5) {
+    --background: #f9b9b9; /* #e5a9a9보다 밝은 색상 */
   }
-  &:nth-of-type(6),
-  .tab-content ul li:nth-of-type(6) {
-    --background: #6cb6bb;
+  &:nth-of-type(6) {
+    --background: #85d3d5; /* #6cb6bb보다 밝은 색상 */
   }
-  &:nth-of-type(7),
-  .tab-content ul li:nth-of-type(7) {
-    --background: #4d5daf;
+  &:nth-of-type(7) {
+    --background: #6f7fd7; /* #4d5daf보다 밝은 색상 */
   }
 `;
 
-export const AboutContainer = styled.section`
+// export const AboutContainer = styled.section`
+export const AboutContents = styled.ul`
   position: relative;
   border: 2px solid;
   border-radius: 2px;
   width: 100%;
+  height: 80%;
   top: -2px;
   left: -2px;
   z-index: 1;
 `;
 
-export const AboutContents = styled.ul``;
+// export const AboutContents = styled.ul``;
 
 export const AboutContent = styled.li`
   transition: all 0.3s;
+  width: 100%;
+  height: 100%;
   z-index: 1;
-  display: none;
+  /* display: none; */
   background: var(--background);
   border-radius: 2px;
   padding: 1rem;
@@ -276,10 +274,32 @@ export const AboutContent = styled.li`
     visibility: visible;
     opacity: 1;
   }
+  &:nth-of-type(1) {
+    --background: #8a2c7a; /* #640d6b보다 밝은 색상 */
+  }
+  &:nth-of-type(2) {
+    --background: #d74b94; /* #b51b75보다 밝은 색상 */
+  }
+  &:nth-of-type(3) {
+    --background: #c85eaf; /* #af4d98보다 밝은 색상 */
+  }
+  &:nth-of-type(4) {
+    --background: #f08eb4; /* #d66ba0보다 밝은 색상 */
+  }
+  &:nth-of-type(5) {
+    --background: #f9b9b9; /* #e5a9a9보다 밝은 색상 */
+  }
+  &:nth-of-type(6) {
+    --background: #85d3d5; /* #6cb6bb보다 밝은 색상 */
+  }
+  &:nth-of-type(7) {
+    --background: #6f7fd7; /* #4d5daf보다 밝은 색상 */
+  }
 `;
 
 export const AboutME = styled.article`
   display: flex;
+  height: 100%;
   min-height: 20rem;
   border: 2px solid;
   background-size: 8% 8%, 2px 2px;
@@ -312,8 +332,58 @@ export const MySkills = styled.article`
   line-height: 160%;
 `;
 
-export const ToolIconTitle = styled.p``;
+// export const ToolIconTitle = styled.p`
+//   width: 90%;
+//   line-height: 40px;
+//   font-size: 2.5rem;
+//   font-weight: bold;
+//   text-align: center;
+//   b {
+//     padding-left: 0.3rem;
+//     color: #ff5d2c;
+//   }
+// `;
 
-export const ToolIcons = styled.span``;
+export const ToolIcons = styled.span`
+  width: 90%;
+  height: calc(100% - 40px);
+  height: 100%;
+  /* border: 1px solid greenyellow; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  padding-bottom: 8.65rem;
+`;
 
-export const ToolIcon = styled.div``;
+export const ToolIcon = styled.div`
+  display: inline-block;
+  height: 50px;
+  height: 3.125rem;
+  height: 65px;
+  height: 4.0625rem;
+  width: 4.0625rem;
+  background: url(${(props) => props.$imgUrl}) center/contain no-repeat;
+  width: ${(props) => (props.$ratio ? `calc(${props.$ratio} * 50px)` : "50px")};
+
+  /* 각 이미지에 맞는 비율 설정 */
+  &:nth-child(1) {
+    width: calc(5rem * 4 / 5);
+  } /* firebase */
+  &:nth-child(7) {
+    width: calc(4.0625rem * 32 / 11);
+  } /* firebase */
+  &:nth-child(8) {
+    width: calc(3.2rem * 24 / 10);
+  } /* git */
+
+  /* 마우스 올렸을 때 이미지가 커지도록 설정 */
+  transition: transform 0.3s ease; /* 애니메이션 부드럽게 설정 */
+  &:hover {
+    transform: scale(1.1); /* 이미지 크기를 10% 확대 */
+    cursor: pointer;
+  }
+  &:nth-child(3):hover,
+  &:nth-child(5):hover {
+    transform: scale(1.2); /* 이미지 크기를 10% 확대 */
+  }
+`;
