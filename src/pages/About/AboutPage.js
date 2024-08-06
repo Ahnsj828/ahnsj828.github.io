@@ -81,6 +81,8 @@ import {
   AboutContent,
   AboutME,
   ContentInner,
+  AboutTxt,
+  MyPic,
   MySkills,
   ToolIcons,
   ToolIcon,
@@ -137,8 +139,16 @@ const AboutPage = () => {
           <AboutContent style={{ display: activeTab === 1 ? "block" : "none" }}>
             <AboutME>
               <ContentInner>
-                <h4>About me</h4>
-                <p>여기에 내용이 들어갑니다.</p>
+                <AboutTxt>
+                  <h4>About me</h4>
+                  <p>
+                    공부하며 만들어본 작업의 결과물들을 담았습니다.
+                    <br /> 부족한 부분들이 많지만 꾸준히 채워가며 그 경험을
+                    바탕으로 성장하는 사람이 되고 싶습니다. 스스로에게 한계를
+                    두지 않고 끊임없이 성장하는 개발자가 되겠습니다.
+                  </p>
+                </AboutTxt>
+                <MyPic></MyPic>
               </ContentInner>
             </AboutME>
           </AboutContent>

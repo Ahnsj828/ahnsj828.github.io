@@ -166,21 +166,21 @@ export const Tab = styled.button`
   &:first-of-type {
     margin-left: 30px;
   }
-  & div {
+  div {
     position: relative;
     padding: 6px 5px;
     z-index: 10;
-  }
-  & span {
-    position: relative;
-    display: inline-block;
-    min-width: 6rem;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    padding: 6px 15px 6px;
-    font-size: 140%;
-    color: #fff;
-    z-index: 5;
+    span {
+      position: relative;
+      display: inline-block;
+      min-width: 6rem;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      padding: 6px 15px 6px;
+      font-size: 140%;
+      color: #fff;
+      z-index: 5;
+    }
   }
   &:before,
   &:after {
@@ -221,9 +221,11 @@ export const Tab = styled.button`
   }
   &:nth-of-type(1) {
     --background: #8a2c7a; /* #640d6b보다 밝은 색상 */
+    --background: #c85eaf;
   }
   &:nth-of-type(2) {
     --background: #d74b94; /* #b51b75보다 밝은 색상 */
+    --background: #6f7fd7;
   }
   &:nth-of-type(3) {
     --background: #c85eaf; /* #af4d98보다 밝은 색상 */
@@ -276,9 +278,11 @@ export const AboutContent = styled.li`
   }
   &:nth-of-type(1) {
     --background: #8a2c7a; /* #640d6b보다 밝은 색상 */
+    --background: #c85eaf;
   }
   &:nth-of-type(2) {
     --background: #d74b94; /* #b51b75보다 밝은 색상 */
+    --background: #6f7fd7;
   }
   &:nth-of-type(3) {
     --background: #c85eaf; /* #af4d98보다 밝은 색상 */
@@ -311,14 +315,52 @@ export const AboutME = styled.article`
 
 export const ContentInner = styled.span`
   padding: 20px;
+  padding: 1.25rem;
   padding-right: 40px;
+  padding-right: 2.5rem;
+  display: flex;
   h4 {
-    padding: 5px;
-    padding-bottom: 25px;
-    text-decoration: underline;
+    width: 30%;
+    margin: 5px;
+    margin: 0.3125rem;
+    margin-bottom: 25px;
+    margin-bottom: 2rem;
+    /* text-decoration: underline; */
+    box-shadow: inset 0 -20px 0 #bfffa1; // 형광 연두
+    box-shadow: inset 0 -20px 0 rgba(255, 93, 44, 0.7); // 형광 연두
+    box-shadow: inset 0 -20px 0 #ff8a66; // 형광 다홍
+    box-shadow: inset 0 -20px 0 #ffcc00; // 노랑000
+    box-shadow: inset 0 -20px 0 #ffb500; // 노랑2
+    box-shadow: inset 0 -20px 0 #ff8c00; // 주황
+    box-shadow: inset 0 -20px 0 #ffba67; // 주황2 000
+    /* box-shadow: inset 0 -20px 0 #ff6f00; // 진한 주황 */
     text-transform: uppercase;
     font-size: 40px;
+    font-size: 2.5em;
+    font-weight: bold;
+    &::before {
+    }
   }
+  p {
+    color: #393939;
+    font-family: "IM_Hyemin-Bold";
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.1rem;
+  }
+`;
+
+export const AboutTxt = styled.div`
+  width: 60%;
+  margin-right: 5%;
+  height: 100%;
+`;
+export const MyPic = styled.div`
+  width: 35%;
+  height: 100%;
+  background-color: gray;
+  border-radius: 5%;
+  overflow: hidden;
 `;
 
 export const MySkills = styled.article`
