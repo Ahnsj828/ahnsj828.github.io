@@ -12,3 +12,15 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Yomogi&display=swap");
+/* font-family: 'Patrick Hand', cursive;  */
+/* font-family: "Yomogi", sans-serif; */
+
+@font-face {
+  font-family: "IM_Hyemin-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

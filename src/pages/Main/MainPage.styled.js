@@ -5,14 +5,14 @@ export const MainSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: start;
-  width: 90%;
+  width: 80%;
   /* height: 80%; */
   /* align-items: center; */
   /* margin-top: 3%;
   padding-left: 10%; */
+  position: relative;
   margin-top: 3%;
-  margin-left: 13%;
-  border: 1px solid #f00;
+  margin-left: 10%;
 `;
 
 export const MainImgs = styled.div`
@@ -21,22 +21,21 @@ export const MainImgs = styled.div`
   align-items: center;
   width: 50%;
   /* height: 100%; */
-  border: 1px solid #f00;
 `;
 
 export const MainBg = styled.img`
-  width: 50%;
+  width: 54%;
   height: auto;
   object-fit: cover;
   display: inline-block;
 `;
 
 export const MainImg = styled.img`
-  width: 10%; /* 원하는 너비로 조절 */
+  width: 11%; /* 원하는 너비로 조절 */
   height: auto; /* 비율에 맞게 높이 자동 조정 */
-  /* position: absolute;
+  position: absolute;
   bottom: 0;
-  right: 0; */
+  right: 10%;
 `;
 
 // // HomeSky = noite
@@ -57,9 +56,8 @@ export const MainImg = styled.img`
 export const MainTitles = styled.div`
   width: 30%;
   height: 100%;
-  padding-top: 13%;
+  padding-top: 14%;
   padding-left: 0.3%;
-  border: 1px solid #f00;
 `;
 
 export const MainTitle = styled.div`
