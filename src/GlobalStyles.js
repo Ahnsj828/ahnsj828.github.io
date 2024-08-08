@@ -29,6 +29,9 @@ const GlobalStyles = createGlobalStyle`
 .swiper-slide {
   all: unset; /* 모든 스타일 제거 */
   display: block;
+  /* display: flex !important;
+  justify-content: center !important;
+  align-items: center !important; */
 }
 
 /* .swiper-slide {
