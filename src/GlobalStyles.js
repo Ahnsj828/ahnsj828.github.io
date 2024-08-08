@@ -24,6 +24,18 @@ const GlobalStyles = createGlobalStyle`
     font-family: "KCC-Ganpan";
   }
 
+/* reset.css */
+.swiper-container,
+.swiper-slide {
+  all: unset; /* 모든 스타일 제거 */
+  display: block;
+}
+
+/* .swiper-slide {
+  background-color: none; 
+  border: none; 
+} */
+
 `;
 
 export default GlobalStyles;
