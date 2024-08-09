@@ -3,9 +3,12 @@ import React from "react";
 
 import {
   ProjectSection,
+  SlideSection,
   SlideWrap,
   Slide,
   SlideInner,
+  ProjectTitle,
+  ProjectPic,
 } from "./ProjectPage.styled";
 
 // Import Swiper styles
@@ -21,42 +24,48 @@ import { Pagination, Navigation } from "swiper/modules";
 const ProjectPage = () => {
   return (
     <ProjectSection>
-      <SlideWrap
-        slidesPerView={1}
-        grabCursor={true}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-      >
-        <Slide>
-          <SlideInner>
-            <p>1111</p>
-          </SlideInner>
-        </Slide>
-        <Slide>
-          <SlideInner>
-            <p>2222</p>
-          </SlideInner>
-        </Slide>
-        <Slide>
-          <SlideInner>
-            <p>3333</p>
-          </SlideInner>
-        </Slide>
-        <Slide>
-          <SlideInner>
-            <p>4444</p>
-          </SlideInner>
-        </Slide>
-        <Slide>
-          <SlideInner>
-            <p>5555</p>
-          </SlideInner>
-        </Slide>
-      </SlideWrap>
+      <SlideSection>
+        <SlideWrap
+          slidesPerView={1}
+          grabCursor={true}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+        >
+          <Slide>
+            <SlideInner>
+              <ProjectTitle>
+                <h4>Yeogi Clone Coding</h4>
+                <p>여기어때 클론코딩</p>
+              </ProjectTitle>
+              <ProjectPic></ProjectPic>
+            </SlideInner>
+          </Slide>
+          <Slide>
+            <SlideInner>
+              <p>2222</p>
+            </SlideInner>
+          </Slide>
+          <Slide>
+            <SlideInner>
+              <p>3333</p>
+            </SlideInner>
+          </Slide>
+          <Slide>
+            <SlideInner>
+              <p>4444</p>
+            </SlideInner>
+          </Slide>
+          <Slide>
+            <SlideInner>
+              <p>5555</p>
+            </SlideInner>
+          </Slide>
+        </SlideWrap>
+      </SlideSection>
     </ProjectSection>
   );
 };
