@@ -4,7 +4,7 @@ import React from "react";
 import {
   ProjectSection,
   SlideWrap,
-  // Slide,
+  Slide,
   SlideInner,
 } from "./ProjectPage.styled";
 
@@ -15,8 +15,6 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 
 // import { SwiperSlide } from "swiper/react";
-
-import { Swiper, SwiperSlide } from "swiper/react";
 
 // import "./styles.css";
 
@@ -33,31 +31,31 @@ const ProjectPage = () => {
         navigation={true}
         modules={[Pagination, Navigation]}
       >
-        <SwiperSlide>
+        <Slide>
           <SlideInner>
             <p>1111</p>
           </SlideInner>
-        </SwiperSlide>
-        <SwiperSlide>
+        </Slide>
+        <Slide>
           <SlideInner>
             <p>2222</p>
           </SlideInner>
-        </SwiperSlide>
-        <SwiperSlide>
+        </Slide>
+        <Slide>
           <SlideInner>
             <p>3333</p>
           </SlideInner>
-        </SwiperSlide>
-        <SwiperSlide>
+        </Slide>
+        <Slide>
           <SlideInner>
             <p>4444</p>
           </SlideInner>
-        </SwiperSlide>
-        <SwiperSlide>
+        </Slide>
+        <Slide>
           <SlideInner>
             <p>5555</p>
           </SlideInner>
-        </SwiperSlide>
+        </Slide>
       </SlideWrap>
     </ProjectSection>
   );
