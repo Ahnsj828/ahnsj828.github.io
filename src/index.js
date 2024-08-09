@@ -15,23 +15,20 @@
 // // to log results (for example: reportWebVitals(console.log))
 // // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
-
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-// import { BrowserRouter } from "react-router-dom";
+import GlobalStyles from "./GlobalStyles";
 import MouseEffect from "./features/MouseEffect";
 import App from "./App";
-import GlobalStyles from "./GlobalStyles";
 
 const root = createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    {/* <BrowserRouter> */}
     <GlobalStyles />
+    {/* <RouterProvider router={router} /> */}
     <App />
-    {/* </BrowserRouter> */}
     <MouseEffect />
   </React.StrictMode>
 );
