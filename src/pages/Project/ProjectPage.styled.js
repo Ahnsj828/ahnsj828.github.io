@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// ProjectSection 스타일
 export const ProjectSection = styled.section`
   display: flex;
   justify-content: center;

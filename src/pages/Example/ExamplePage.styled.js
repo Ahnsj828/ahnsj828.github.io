@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const ExampleSection = styled.section`
   display: flex;
   justify-content: center;

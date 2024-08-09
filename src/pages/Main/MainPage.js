@@ -5,10 +5,9 @@ import mainBg from "../../assets/images/Section/Main/mainBg.png";
 import mainW2 from "../../assets/images/Section/Main/mainW2.png";
 import {
   MainSection,
-  // MainImgs,
-  MainTitles,
   MainBg,
   MainImg,
+  MainTitles,
   MainTitle,
 } from "./MainPage.styled";
 
@@ -31,7 +30,7 @@ const MainPage = () => {
 
     // 초기 위치 설정
     gsap.set(bgImage, { y: -500, opacity: 0 });
-    gsap.set(movingImg, { x: "100%", opacity: 1 });
+    gsap.set(movingImg, { x: "100%", opacity: 0 }); // 출발 위치를 오른쪽 100%로 설정하고 opacity를 0으로 설정
 
     // Draggable을 이용한 배경 이미지 애니메이션 설정
     const draggable = Draggable.create(bgImage, {
@@ -100,28 +99,37 @@ const MainPage = () => {
     function startMovingImgAnimation() {
       // 이미지 이동 애니메이션 정의
       const startX = "100%"; // 시작 위치 (화면의 오른쪽)
-      const endX = "-100%"; // 끝나는 위치 (화면의 왼쪽)
-      const duration = 10; // 애니메이션 전체 시간
+      const endX = "-400%"; // 끝나는 위치 (화면의 왼쪽)
+      const duration = 18; // 애니메이션 전체 시간
 
-      const tlMovingImg = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+      const tlMovingImg = gsap.timeline({
+        repeat: -1,
+        repeatDelay: 0,
+      });
+
       tlMovingImg
+        // 이동 시작 시 천천히 나타나기
         .to(movingImg, {
-          duration: duration,
+          duration: duration * 0.15, // 전체 시간의 15%
+          x: "7%", // 전체 거리의 10%만큼 이동
+          opacity: 1, // 완전히 나타나도록 설정
+          ease: "linear",
+        })
+        // 이동하며 opacity를 유지
+        .to(movingImg, {
+          duration: duration * 0.75, // 전체 시간의 70%
+          x: "-370%", // 전체 거리 이동
+          opacity: 1, // opacity 유지
+          ease: "linear",
+        })
+        // 마지막 10%에서 천천히 사라지기
+        .to(movingImg, {
+          duration: duration * 0.1, // 전체 시간의 10%
           x: endX,
-          opacity: 1,
-          ease: "power2.linear",
+          opacity: 0, // 완전히 사라지도록 설정
+          ease: "linear",
         })
-        .to(movingImg, {
-          duration: 0.5,
-          opacity: 0,
-          ease: "power2.out",
-        })
-        .set(movingImg, { x: startX }) // 애니메이션이 끝나면 다시 시작 위치로 설정
-        .to(movingImg, {
-          duration: 0.5,
-          opacity: 1,
-          ease: "power2.in",
-        });
+        .set(movingImg, { x: startX, opacity: 0 }); // 애니메이션이 끝나면 다시 시작 위치로 설정 및 opacity 초기화
     }
 
     // Cleanup 함수
