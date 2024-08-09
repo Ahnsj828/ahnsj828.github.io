@@ -6,9 +6,6 @@ import {
   SlideSection,
   SlideWrap,
   Slide,
-  SlideInner,
-  ProjectTitle,
-  ProjectPic,
 } from "./ProjectPage.styled";
 
 // Import Swiper styles
@@ -16,12 +13,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
+import ProjectCard from "./component/projectCard/ProjectCard";
+import projectList from "../../assets/data/projectList.js";
 
 // import { SwiperSlide } from "swiper/react";
 
 // import "./styles.css";
 
 const ProjectPage = () => {
+  console.log(projectList);
   return (
     <ProjectSection>
       <SlideSection>
@@ -35,35 +35,14 @@ const ProjectPage = () => {
           navigation={true}
           modules={[Pagination, Navigation]}
         >
-          <Slide>
-            <SlideInner>
-              <ProjectTitle>
-                <h4>Yeogi Clone Coding</h4>
-                <p>여기어때 클론코딩</p>
-              </ProjectTitle>
-              <ProjectPic></ProjectPic>
-            </SlideInner>
-          </Slide>
-          <Slide>
-            <SlideInner>
-              <p>2222</p>
-            </SlideInner>
-          </Slide>
-          <Slide>
-            <SlideInner>
-              <p>3333</p>
-            </SlideInner>
-          </Slide>
-          <Slide>
-            <SlideInner>
-              <p>4444</p>
-            </SlideInner>
-          </Slide>
-          <Slide>
-            <SlideInner>
-              <p>5555</p>
-            </SlideInner>
-          </Slide>
+          {projectList.map((project) => (
+            // <Slide key={project.id}>
+            //   <ProjectCard project={project} />
+            // </Slide>
+            <Slide>
+              <ProjectCard project={project} />
+            </Slide>
+          ))}
         </SlideWrap>
       </SlideSection>
     </ProjectSection>
