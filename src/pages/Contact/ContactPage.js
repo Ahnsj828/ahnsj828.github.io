@@ -2,14 +2,8 @@ import React from "react";
 
 import { ContactSection } from "./ContactPage.styled";
 
-import BasicLayout from "../../layouts/BasicLayout";
-
 const ContactPage = () => {
-  return (
-    <BasicLayout>
-      <ContactSection></ContactSection>
-    </BasicLayout>
-  );
+  return <ContactSection></ContactSection>;
 };
 
 export default ContactPage;

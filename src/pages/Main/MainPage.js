@@ -10,7 +10,6 @@ import {
   MainTitles,
   MainTitle,
 } from "./MainPage.styled";
-import BasicLayout from "../../layouts/BasicLayout";
 
 // 필요한 플러그인 등록
 gsap.registerPlugin(Draggable, TextPlugin);
@@ -141,17 +140,15 @@ const MainPage = () => {
   }, []);
 
   return (
-    <BasicLayout>
-      <MainSection>
-        <MainBg ref={bgImageRef} src={mainBg} alt="Falling" />
-        <MainImg ref={movingImgRef} src={mainW2} />
-        <MainTitles>
-          <MainTitle ref={typewriterRef1}></MainTitle>
-          <MainTitle ref={typewriterRef2}></MainTitle>
-          <MainTitle ref={typewriterRef3}></MainTitle>
-        </MainTitles>
-      </MainSection>
-    </BasicLayout>
+    <MainSection>
+      <MainBg ref={bgImageRef} src={mainBg} alt="Falling" />
+      <MainImg ref={movingImgRef} src={mainW2} />
+      <MainTitles>
+        <MainTitle ref={typewriterRef1}></MainTitle>
+        <MainTitle ref={typewriterRef2}></MainTitle>
+        <MainTitle ref={typewriterRef3}></MainTitle>
+      </MainTitles>
+    </MainSection>
   );
 };
 
