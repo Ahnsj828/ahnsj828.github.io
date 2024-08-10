@@ -3,7 +3,6 @@ import gsap from "gsap"; // GSAP import
 import { Draggable, TextPlugin } from "gsap/all"; // Draggable 및 TextPlugin import
 import mainBg from "../../assets/images/Section/Main/mainBg.png";
 import mainW2 from "../../assets/images/Section/Main/mainW2.png";
-
 import {
   MainSection,
   MainBg,
