@@ -2,26 +2,30 @@ const list = [
   {
     id: 1,
     type: "pj",
-    title: "에뛰드 클론코딩",
+    title: "Etude House Clone Coding",
     text: "sadlkjsadkljsadssa",
+    // video: "/assets/videos/etude-clone.mp4",
   },
   {
     id: 2,
     type: "pj",
-    title: "여기어때 클론코딩",
+    title: "Yeogi Clone Coding",
     text: "sadlkjsadkljsadssa",
+    video: "/assets/videos/yeogi.mp4",
   },
   {
     id: 3,
     type: "pj",
     title: "기업 클론코딩",
     text: "sadlkjsadkljsadssa",
+    // video: "/assets/videos/corporate-clone.mp4",
   },
   {
     id: 4,
     type: "pj",
     title: "쇼핑몰 클론코딩",
     text: "sadlkjsadkljsadssa",
+    // video: "/assets/videos/shopping-clone.mp4",
   },
   {
     id: 5,

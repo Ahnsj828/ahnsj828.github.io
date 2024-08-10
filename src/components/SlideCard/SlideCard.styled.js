@@ -54,6 +54,16 @@ export const SlidePic = styled.span`
   background-color: gray;
   border-radius: 5%;
   overflow: hidden;
+
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 `;
 
 export const SlideTxt = styled.span`
