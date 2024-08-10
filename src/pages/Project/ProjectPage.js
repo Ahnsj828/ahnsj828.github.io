@@ -1,62 +1,39 @@
 import React from "react";
-// import { styled } from "styled-components";
-
 import {
   ProjectSection,
+  SlideSection,
   SlideWrap,
   Slide,
-  SlideInner,
 } from "./ProjectPage.styled";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
-
-// import { SwiperSlide } from "swiper/react";
-
-// import "./styles.css";
+import SlideCard from "../../components/SlideCard/SlideCard.js";
+import list from "../../assets/data/list.js";
 
 const ProjectPage = () => {
+  // 'pj' 타입의 데이터만 필터링
+  const projectList = list.filter((item) => item.type === "pj");
+
   return (
     <ProjectSection>
-      <SlideWrap
-        slidesPerView={1}
-        grabCursor={true}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-      >
-        <Slide>
-          <SlideInner>
-            <p>1111</p>
-          </SlideInner>
-        </Slide>
-        <Slide>
-          <SlideInner>
-            <p>2222</p>
-          </SlideInner>
-        </Slide>
-        <Slide>
-          <SlideInner>
-            <p>3333</p>
-          </SlideInner>
-        </Slide>
-        <Slide>
-          <SlideInner>
-            <p>4444</p>
-          </SlideInner>
-        </Slide>
-        <Slide>
-          <SlideInner>
-            <p>5555</p>
-          </SlideInner>
-        </Slide>
-      </SlideWrap>
+      <SlideSection>
+        <SlideWrap
+          slidesPerView={1}
+          grabCursor={true}
+          loop={true}
+          pagination={{ clickable: true }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+        >
+          {projectList.map((item) => (
+            <Slide key={item.id}>
+              <SlideCard list={item} />
+            </Slide>
+          ))}
+        </SlideWrap>
+      </SlideSection>
     </ProjectSection>
   );
 };
