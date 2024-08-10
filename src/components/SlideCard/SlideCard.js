@@ -7,14 +7,26 @@ import {
   SlideInner,
 } from "./SlideCard.styled";
 
+const widthMap = {
+  8: "11rem",
+  10: "13.5rem",
+  11: "14.5rem",
+  12: "16rem",
+  13: "17rem",
+  14: "18.3rem",
+};
+
+const getTitleWidth = (title) => {
+  const length = title.length;
+  // 제목 길이에 맞는 width를 반환합니다.
+  return widthMap[length] || "10rem"; // 기본값
+};
+
 const SlideCard = ({ list }) => {
-  // 동적 스타일 값을 정의합니다. 예를 들어, 제목 길이에 따라 다르게 설정할 수 있습니다.
-  const titleWidth = list.title.length > 11 ? "16rem" : "14.5rem"; // 제목 길이에 따라 width 조정
-  // const titlePaddingLeft = list.title.length > 10 ? "0.3rem" : "0.3rem";
+  const titleWidth = getTitleWidth(list.title);
 
   return (
     <SlideInner>
-      {/* <SlideTitle width={titleWidth} paddingLeft={titlePaddingLeft}> */}
       <SlideTitle width={titleWidth}>{list.title}</SlideTitle>
       <SlideContent>
         <SlidePic>
