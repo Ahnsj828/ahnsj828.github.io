@@ -1,11 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   SlideInner,
   SlideTitle,
   SlideContent,
   SlideVideo,
   Monitor,
-  SlideTxt,
+  Slideintro,
+  UseTools,
+  UseTool,
+  Links,
+  PageLink,
 } from "./SlideCard.styled";
 
 import browser from "../../assets/images/Section/PjEx/browserDesktop.png";
@@ -39,9 +44,43 @@ const SlideCard = ({ list }) => {
             Your browser does not support the video tag.
           </video>
         </SlideVideo>
-        <SlideTxt>
-          <p>{list.text}</p>
-        </SlideTxt>
+        <Slideintro>
+          <UseTools>
+            {(list.useTool || []).map((tool, index) => (
+              <UseTool key={index}>{tool}</UseTool>
+            ))}
+          </UseTools>
+          {/* <p>{list.text}</p> */}
+          <Links>
+            {list.pageLink && (
+              <Link
+                to={list.pageLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <PageLink src={list.pageLinkImage} alt="page link" />
+              </Link>
+            )}
+            {list.githubLink && (
+              <Link
+                to={list.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <PageLink src={list.githubLinkImage} alt="github link" />
+              </Link>
+            )}
+            {list.figmaLink && (
+              <Link
+                to={list.figmaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <PageLink src={list.figmaLinkImage} alt="figma link" />
+              </Link>
+            )}
+          </Links>
+        </Slideintro>
       </SlideContent>
     </SlideInner>
   );
