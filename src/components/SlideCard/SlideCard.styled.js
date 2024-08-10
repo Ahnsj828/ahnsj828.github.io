@@ -11,25 +11,29 @@ export const SlideInner = styled.div`
 `;
 
 export const SlideTitle = styled.div`
-  border: 1px solid #f00;
+  /* border: 1px solid #f00; */
   /* width: auto; */
   margin-right: 5%;
-  height: 20%;
-  h4 {
-    border: 1px solid rebeccapurple;
-    /* width: auto; */
-    margin: 0.3125rem;
-    /* margin-bottom: 1rem; */
-    /* margin-bottom: 2.5rem; */
-    box-shadow: inset 0 -20px 0 #f8a05f; //  밝은 오렌지색
-    text-transform: uppercase;
-    font-size: 40px;
-    font-size: 2.5em;
-    font-weight: bold;
-    &:last-child {
-      width: 51%;
-    }
-  }
+  /* height: 20%; */
+  margin: 0.3125rem;
+  /* margin-bottom: 1rem; */
+  /* margin-bottom: 2.5rem; */
+  box-shadow: inset 0 -20px 0 #f8a05f; //  밝은 오렌지색
+  text-transform: uppercase;
+  font-size: 40px;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 5%;
+
+  padding-left: 0.3rem;
+  /* width: 16rem;
+  padding-left: 0.5%;
+  &:nth-child(2) {
+    width: 40%;
+    padding-left: 0.5%;
+  } */
+  width: ${(props) => props.width || "auto"}; /* 동적 width */
+  /* padding-left: ${(props) => props.paddingLeft || "1rem"}; */
   p {
     color: #393939;
     font-family: "IM_Hyemin-Bold";
@@ -43,6 +47,7 @@ export const SlideTitle = styled.div`
 export const SlideContent = styled.div`
   border: 1px solid darkcyan;
   display: flex;
+  align-items: center;
   width: 100%;
   height: 70%;
 `;
@@ -51,8 +56,11 @@ export const SlidePic = styled.span`
   display: inline-block;
   width: 35%;
   height: 100%;
-  background-color: gray;
-  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: gray; */
+  /* border-radius: 5%; */
   overflow: hidden;
 
   width: 100%;
@@ -60,14 +68,14 @@ export const SlidePic = styled.span`
   overflow: hidden;
 
   video {
-    width: 100%;
+    border: 1px solid;
+    width: 70%;
     height: auto;
     display: block;
   }
 `;
 
 export const SlideTxt = styled.span`
-  border: 1px solid purple;
   border: 1px solid #f00;
   width: auto;
   margin-right: 5%;
