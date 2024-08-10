@@ -49,36 +49,52 @@ export const SlideContent = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  height: 70%;
+  height: 80%;
 `;
 
-export const SlidePic = styled.span`
+export const SlideVideo = styled.span`
   display: inline-block;
-  width: 35%;
-  height: 100%;
+  border: 1px solid blue;
+  width: 50%;
+  height: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
   /* background-color: gray; */
   /* border-radius: 5%; */
   overflow: hidden;
+  position: relative;
 
-  width: 100%;
-  height: auto;
+  /* width: 100%; */
+  /* height: auto; */
   overflow: hidden;
 
   video {
     border: 1px solid;
-    width: 70%;
+    width: 80%;
     height: auto;
+    width: auto;
+    height: 73.5%;
     display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Monitor를 비디오 위에 배치 */
   }
+`;
+
+export const Monitor = styled.img`
+  width: auto;
+  height: 100%;
+  border: 2px solid green; /* 필요에 따라 경계선 추가 */
+  object-fit: contain; /* 이미지 비율 유지 */
 `;
 
 export const SlideTxt = styled.span`
   border: 1px solid #f00;
   width: auto;
-  margin-right: 5%;
+  margin-right: 7%;
   height: 100%;
   h4 {
     width: auto;

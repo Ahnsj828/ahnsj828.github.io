@@ -1,11 +1,14 @@
 import React from "react";
 import {
-  SlideContent,
-  SlidePic,
-  SlideTitle,
-  SlideTxt,
   SlideInner,
+  SlideTitle,
+  SlideContent,
+  SlideVideo,
+  Monitor,
+  SlideTxt,
 } from "./SlideCard.styled";
+
+import browser from "../../assets/images/Section/PjEx/browserDesktop.png";
 
 const widthMap = {
   8: "11rem",
@@ -29,12 +32,13 @@ const SlideCard = ({ list }) => {
     <SlideInner>
       <SlideTitle width={titleWidth}>{list.title}</SlideTitle>
       <SlideContent>
-        <SlidePic>
+        <SlideVideo>
+          <Monitor src={browser} alt="monitor" />
           <video width="100%" height="auto" autoPlay loop muted playsInline>
             <source src={list.video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-        </SlidePic>
+        </SlideVideo>
         <SlideTxt>
           <p>{list.text}</p>
         </SlideTxt>
