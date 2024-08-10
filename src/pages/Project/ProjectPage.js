@@ -1,27 +1,21 @@
 import React from "react";
-// import { styled } from "styled-components";
-
 import {
   ProjectSection,
   SlideSection,
   SlideWrap,
   Slide,
 } from "./ProjectPage.styled";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
-import ProjectCard from "./component/projectCard/ProjectCard";
-import projectList from "../../assets/data/projectList.js";
-
-// import { SwiperSlide } from "swiper/react";
-
-// import "./styles.css";
+import SlideCard from "../../components/SlideCard/SlideCard.js";
+import list from "../../assets/data/list.js";
 
 const ProjectPage = () => {
-  console.log(projectList);
+  // 'pj' 타입의 데이터만 필터링
+  const projectList = list.filter((item) => item.type === "pj");
+
   return (
     <ProjectSection>
       <SlideSection>
@@ -29,18 +23,13 @@ const ProjectPage = () => {
           slidesPerView={1}
           grabCursor={true}
           loop={true}
-          pagination={{
-            clickable: true,
-          }}
+          pagination={{ clickable: true }}
           navigation={true}
           modules={[Pagination, Navigation]}
         >
-          {projectList.map((project) => (
-            // <Slide key={project.id}>
-            //   <ProjectCard project={project} />
-            // </Slide>
-            <Slide>
-              <ProjectCard project={project} />
+          {projectList.map((item) => (
+            <Slide key={item.id}>
+              <SlideCard list={item} />
             </Slide>
           ))}
         </SlideWrap>

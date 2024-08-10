@@ -10,7 +10,7 @@ export const SlideInner = styled.div`
   height: 100%;
 `;
 
-export const ProjectTitle = styled.div`
+export const SlideTitle = styled.div`
   border: 1px solid #f00;
   /* width: auto; */
   margin-right: 5%;
@@ -40,14 +40,14 @@ export const ProjectTitle = styled.div`
   }
 `;
 
-export const ProjectContent = styled.div`
+export const SlideContent = styled.div`
   border: 1px solid darkcyan;
   display: flex;
   width: 100%;
   height: 70%;
 `;
 
-export const ProjectPic = styled.span`
+export const SlidePic = styled.span`
   display: inline-block;
   width: 35%;
   height: 100%;
@@ -56,7 +56,7 @@ export const ProjectPic = styled.span`
   overflow: hidden;
 `;
 
-export const ProjectTxt = styled.span`
+export const SlideTxt = styled.span`
   border: 1px solid purple;
   border: 1px solid #f00;
   width: auto;
