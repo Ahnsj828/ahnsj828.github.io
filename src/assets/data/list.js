@@ -36,11 +36,6 @@ const list = [
     ],
     pageLink: "https://comehere-project.web.app/",
     pageLinkImage: linkImage,
-
-    githubLink: "",
-    githubLinkImage: githubImage,
-    figmaLink: "",
-    figmaLinkImage: figmaImage,
   },
   {
     id: 3,
@@ -49,7 +44,7 @@ const list = [
     text: "sadlkjsadkljsadssa",
     video: "/assets/videos/corporate.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Firebase"],
-    pageLink: "https://etude-boo-0329.web.app/index.html",
+    pageLink: "https://architecture-agency-114af.web.app/",
     pageLinkImage: linkImage,
   },
   {
@@ -78,7 +73,7 @@ const list = [
     text: "sadlkjsadkljsadssa",
     video: "/assets/videos/tabMenu.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Firebase", "Figma", "Illustrator"],
-    pageLink: "https://etude-boo-0329.web.app/index.html",
+    pageLink: "https://tabmenu-pet.web.app/",
     pageLinkImage: linkImage,
     figmaLink:
       "https://www.figma.com/design/zlMyjba4e322zTe6LW0jZf/Tab-Menu?node-id=0-1&m=dev&t=8w8vzNjwNNzFo4m1-1",
@@ -91,7 +86,7 @@ const list = [
     text: "sadlkjsadkljsadssa",
     video: "/assets/videos/naverLogin.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Firebase", "Figma", "Photoshop"],
-    pageLink: "https://etude-boo-0329.web.app/index.html",
+    pageLink: "https://naver-log-in.web.app/",
     pageLinkImage: linkImage,
     figmaLink:
       "https://www.figma.com/design/YgTaAL30PpGrZE05mykgzv/Log-in?node-id=0-1&m=dev&t=aaukuFtAE4MjmfjI-1",
@@ -104,10 +99,10 @@ const list = [
     text: "sadlkjsadkljsadssa",
     video: "/assets/videos/toDoList.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Figma", "Firebase"],
-    pageLink: "https://etude-boo-0329.web.app/index.html",
+    pageLink: "https://to-do-list-with-js.web.app/",
     pageLinkImage: linkImage,
     figmaLink:
-      "https://www.figma.com/design/PPbdgZEOpdsfmPjyKXBh9F/To-Do-List?node-id=0-1&m=dev&t=V5wNuOOBtmvaHrMp-1",
+      "https://www.figma.com/design/SFU6V5ZANKbuVlO2tJr0p2/To-Do-List?node-id=0-1&t=qxfFmqgSMfr6ziFc-1",
     figmaLinkImage: figmaImage,
   },
   {
@@ -117,7 +112,7 @@ const list = [
     text: "sadlkjsadkljsadssa",
     video: "/assets/videos/navigation.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Photoshop", "Firebase"],
-    pageLink: "https://etude-boo-0329.web.app/index.html",
+    pageLink: "https://navigation-responsive.web.app/",
     pageLinkImage: linkImage,
     figmaLink:
       "https://www.figma.com/design/TpSpMDKOkrFGGxgEDXf52O/Navigation?node-id=0-1&m=dev&t=vsCaPxDXmLKBur1y-1",
@@ -126,12 +121,6 @@ const list = [
 ];
 
 export default list;
-
-// Yeogi Clone Coding
-
-// Corporate Clone Coding
-
-// Etude House Clone Coding
 
 // 10글자에 띄어쓰기 포함 총 11글자
 // 11글자에 띄어쓰기 포함 총 12글자
