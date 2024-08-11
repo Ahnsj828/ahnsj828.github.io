@@ -1,5 +1,4 @@
-// src/router/router.js
-import { Suspense, lazy, useState } from "react";
+import { Suspense, lazy } from "react";
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import styled from "styled-components";
 import Header from "../components/Header/Header";
