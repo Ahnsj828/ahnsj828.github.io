@@ -1,14 +1,39 @@
 import React from "react";
-
-import { ProjectSection } from "./ProjectPage.styled";
-
-import BasicLayout from "../../layouts/BasicLayout";
+import {
+  ProjectSection,
+  SlideSection,
+  SlideWrap,
+  Slide,
+} from "./ProjectPage.styled";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper/modules";
+import SlideCard from "../../components/SlideCard/SlideCard.js";
+import list from "../../assets/data/list.js";
 
 const ProjectPage = () => {
+  const projectList = list.filter((item) => item.type === "pj");
+
   return (
-    <BasicLayout>
-      <ProjectSection></ProjectSection>
-    </BasicLayout>
+    <ProjectSection>
+      <SlideSection>
+        <SlideWrap
+          slidesPerView={1}
+          grabCursor={true}
+          loop={true}
+          pagination={{ clickable: true }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+        >
+          {projectList.map((item) => (
+            <Slide key={item.id}>
+              <SlideCard list={item} />
+            </Slide>
+          ))}
+        </SlideWrap>
+      </SlideSection>
+    </ProjectSection>
   );
 };
 

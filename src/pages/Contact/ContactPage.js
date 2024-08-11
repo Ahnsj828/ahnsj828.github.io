@@ -5,6 +5,7 @@ import contactBg from "../../assets/images/Section/Contact/contactBg.png";
 import contactC from "../../assets/images/Section/Contact/contactC.png";
 import contactG from "../../assets/images/Section/Contact/contactG.png";
 
+
 import {
   ContactSection,
   ContactImgs,
@@ -116,6 +117,10 @@ const ContactPage = () => {
       </ContactICons>
     </ContactSection>
   );
+
+const ContactPage = () => {
+  return <ContactSection></ContactSection>;
+
 };
 
 export default ContactPage;
