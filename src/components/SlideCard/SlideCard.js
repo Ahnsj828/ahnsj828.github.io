@@ -26,8 +26,7 @@ const widthMap = {
 
 const getTitleWidth = (title) => {
   const length = title.length;
-  // 제목 길이에 맞는 width를 반환합니다.
-  return widthMap[length] || "10rem"; // 기본값
+  return widthMap[length] || "10rem";
 };
 
 const SlideCard = ({ list }) => {
@@ -50,7 +49,6 @@ const SlideCard = ({ list }) => {
               <UseTool key={index}>{tool}</UseTool>
             ))}
           </UseTools>
-          {/* <p>{list.text}</p> */}
           <Links>
             {list.pageLink && (
               <Link
