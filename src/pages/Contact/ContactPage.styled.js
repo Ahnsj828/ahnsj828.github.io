@@ -29,7 +29,6 @@ export const ContactSection = styled.section`
   margin-top: 3%;
 `;
 
-// Image container styles
 export const ContactImgs = styled.article`
   position: relative;
   display: flex;
@@ -65,7 +64,6 @@ export const ContactGrass = styled.img`
   z-index: 3;
 `;
 
-// Icon container styles
 export const ContactICons = styled.ul`
   position: absolute;
   display: flex;
@@ -79,7 +77,6 @@ export const ContactICons = styled.ul`
   height: 6rem;
 `;
 
-// Icon item styles
 export const ContactICon = styled.li`
   display: flex;
   align-items: center;
@@ -114,10 +111,10 @@ export const StyledLink = styled(Link)`
 export const IConTxt = styled.span`
   display: ${(props) => (props.$show ? "block" : "none")};
   position: absolute;
-  bottom: -5rem; /* Increase this value to move text down further */
+  bottom: -5rem;
   left: 50%;
-  transform: translateX(-50%); /* Center the text horizontally */
-  width: max-content; /* Adjust the width based on content */
+  transform: translateX(-50%);
+  width: max-content;
   font: normal 1.5rem/1 "Kcc-Ganpan";
   background: #fff7e1;
   background-image: linear-gradient(#e4e4e4 1px, transparent 1px);
@@ -132,7 +129,7 @@ export const IConTxt = styled.span`
   &::before {
     content: "";
     position: absolute;
-    top: -20px; /* Position the arrow */
+    top: -20px;
     left: 50%;
     transform: translateX(-50%);
     width: 0;
