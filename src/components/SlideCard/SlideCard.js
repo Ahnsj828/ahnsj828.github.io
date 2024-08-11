@@ -23,7 +23,6 @@ const widthMap = {
   13: "17rem",
   14: "18.3rem",
 };
-
 const getTitleWidth = (title) => {
   const length = title.length;
   return widthMap[length] || "10rem";
