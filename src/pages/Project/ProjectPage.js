@@ -13,7 +13,6 @@ import SlideCard from "../../components/SlideCard/SlideCard.js";
 import list from "../../assets/data/list.js";
 
 const ProjectPage = () => {
-  // 'pj' 타입의 데이터만 필터링
   const projectList = list.filter((item) => item.type === "pj");
 
   return (
