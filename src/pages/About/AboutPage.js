@@ -1,10 +1,5 @@
 import React, { useState } from "react";
 
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-import "./AboutPage.css";
 import {
   AboutSection,
   TabBtns,
@@ -22,8 +17,6 @@ import {
   SkillIcon,
   SkillTxt,
 } from "./AboutPage.styled";
-
-import BasicLayout from "../../layouts/BasicLayout";
 
 const AboutPage = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -73,81 +66,79 @@ const AboutPage = () => {
   };
 
   return (
-    <BasicLayout>
-      <AboutSection>
-        <TabBtns>
-          <Tab
-            className={activeTab === 1 ? "active" : ""}
-            onClick={() => handleTabClick(1)}
-          >
-            <div>
-              <span>About me</span>
-            </div>
-          </Tab>
-          <Tab
-            className={activeTab === 2 ? "active" : ""}
-            onClick={() => handleTabClick(2)}
-          >
-            <div>
-              <span>My skills</span>
-            </div>
-          </Tab>
-        </TabBtns>
-        <AboutContents>
-          <AboutContent style={{ display: activeTab === 1 ? "block" : "none" }}>
-            <AboutME>
-              <ContentInner>
-                <AboutTxt>
-                  <h4>About me</h4>
-                  <p>
-                    공부하며 만들어본 작업의 결과물들을 담았습니다.
-                    <br /> 부족한 부분들이 많지만 꾸준히 채워가며 그 경험을
-                    바탕으로 성장하는 사람이 되고 싶습니다. 스스로에게 한계를
-                    두지 않고 끊임없이 성장하는 개발자가 되겠습니다.
-                  </p>
-                </AboutTxt>
-                <MyPic></MyPic>
-              </ContentInner>
-            </AboutME>
-          </AboutContent>
-          <AboutContent style={{ display: activeTab === 2 ? "block" : "none" }}>
-            <MySkills>
-              <ContentInner>
-                <SkillTitle>
-                  <h4>My skill</h4>
-                </SkillTitle>
-                <SkillAbout>
-                  <SkillIcons>
-                    {iconsList.map((iconName, idx) => {
-                      const imageUrl = require(`../../assets/images/Section/About/${iconName}-icon.png`);
-                      const ratio = 1; // 비율 조정
-                      return (
-                        <SkillIcon
-                          key={idx}
-                          $imgUrl={imageUrl}
-                          $ratio={ratio}
-                          onMouseEnter={() => setHoveredSkill(iconName)}
-                          onMouseLeave={() => setHoveredSkill("")}
-                        />
-                      );
-                    })}
-                  </SkillIcons>
-                  <SkillTxt>
-                    {skillDescriptions[hoveredSkill] || (
-                      <>
-                        Hover over an icon to see details
-                        <br />
-                        아이콘 위에 마우스를 올리면 세부 정보를 볼 수 있습니다.
-                      </>
-                    )}
-                  </SkillTxt>
-                </SkillAbout>
-              </ContentInner>
-            </MySkills>
-          </AboutContent>
-        </AboutContents>
-      </AboutSection>
-    </BasicLayout>
+    <AboutSection>
+      <TabBtns>
+        <Tab
+          className={activeTab === 1 ? "active" : ""}
+          onClick={() => handleTabClick(1)}
+        >
+          <div>
+            <span>About me</span>
+          </div>
+        </Tab>
+        <Tab
+          className={activeTab === 2 ? "active" : ""}
+          onClick={() => handleTabClick(2)}
+        >
+          <div>
+            <span>My skills</span>
+          </div>
+        </Tab>
+      </TabBtns>
+      <AboutContents>
+        <AboutContent style={{ display: activeTab === 1 ? "block" : "none" }}>
+          <AboutME>
+            <ContentInner>
+              <AboutTxt>
+                <h4>About me</h4>
+                <p>
+                  공부하며 만들어본 작업의 결과물들을 담았습니다.
+                  <br /> 부족한 부분들이 많지만 꾸준히 채워가며 그 경험을
+                  바탕으로 성장하는 사람이 되고 싶습니다. 스스로에게 한계를 두지
+                  않고 끊임없이 성장하는 개발자가 되겠습니다.
+                </p>
+              </AboutTxt>
+              <MyPic></MyPic>
+            </ContentInner>
+          </AboutME>
+        </AboutContent>
+        <AboutContent style={{ display: activeTab === 2 ? "block" : "none" }}>
+          <MySkills>
+            <ContentInner>
+              <SkillTitle>
+                <h4>My skill</h4>
+              </SkillTitle>
+              <SkillAbout>
+                <SkillIcons>
+                  {iconsList.map((iconName, idx) => {
+                    const imageUrl = require(`../../assets/images/Section/About/${iconName}-icon.png`);
+                    const ratio = 1; // 비율 조정
+                    return (
+                      <SkillIcon
+                        key={idx}
+                        $imgUrl={imageUrl}
+                        $ratio={ratio}
+                        onMouseEnter={() => setHoveredSkill(iconName)}
+                        onMouseLeave={() => setHoveredSkill("")}
+                      />
+                    );
+                  })}
+                </SkillIcons>
+                <SkillTxt>
+                  {skillDescriptions[hoveredSkill] || (
+                    <>
+                      Hover over an icon to see details
+                      <br />
+                      아이콘 위에 마우스를 올리면 세부 정보를 볼 수 있습니다.
+                    </>
+                  )}
+                </SkillTxt>
+              </SkillAbout>
+            </ContentInner>
+          </MySkills>
+        </AboutContent>
+      </AboutContents>
+    </AboutSection>
   );
 };
 
