@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
- 
   * {
     margin: 0;
     padding: 0;
@@ -24,6 +23,11 @@ const GlobalStyles = createGlobalStyle`
     font-family: "KCC-Ganpan";
   }
 
+  .swiper-container,
+  .swiper-slide {
+    all: unset; 
+    display: block;
+  }
 `;
 
 export default GlobalStyles;
