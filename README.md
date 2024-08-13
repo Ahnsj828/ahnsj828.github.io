@@ -72,64 +72,76 @@ IDE: Visual Studio Code, WebStorm
 
 ## 📁 프로젝트 구조
 
-ahnsj828.github.io/
-│
-├── public/
-│ ├── assets/
-│ │ ├── videos/
-│ │ ├── favicon.ico
-│ │ ├── faviconA.ico
-│ │ ├── index.html
-│ │ ├── logo192.png
-│ │ ├── logo512.png
-│ │ ├── manifest.json
-│ │ └── robots.txt
-│
-├── src/
-│ ├── assets/
-│ │ ├── data/
-│ │ │ ├── Animation/
-│ │ │ └── list.js
-│ │ ├── fonts/
-│ │ │ └── Road_Rage/
-│ │ └── images/
-│ │ ├── Background_files/
-│ │ └── Section/
-│ │ ├── About/
-│ │ ├── Contact/
-│ │ ├── Main/
-│ │ └── PjEx/
-│ │
-│ ├── components/
-│ │ ├── Footer/
-│ │ ├── Header/
-│ │ ├── SlideCard/
-│ │ └── LoadingAnimation.js
-│ │
-│ ├── features/
-│ │ └── MouseEffect.js
-│ │
-│ ├── pages/
-│ │ ├── About/
-│ │ ├── Contact/
-│ │ ├── Example/
-│ │ ├── Main/
-│ │ └── Project/
-│ │
-│ ├── router/
-│ │ └── router.js
-│ │
-│ ├── App.css
-│ ├── App.js
-│ ├── GlobalStyles.js
-│ ├── index.css
-│ └── index.js
-│
-├── .gitignore
-├── README.md
-├── babel.config.js
-├── package-lock.json
-└── package.json
+```
+
+🦆ahnsj828.github.io/
+ ┃
+ ┣ 📦public
+ ┃  ┣ 📂assets/
+ ┃  ┃  ┗ 📂videos/
+ ┃  ┣ 📃favicon.ico
+ ┃  ┣ 📃faviconA.ico
+ ┃  ┣ 📃index.html
+ ┃  ┣ 📃logo192.png
+ ┃  ┣ 📃logo512.png
+ ┃  ┣ 📃manifest.json
+ ┃  ┗ 📃robots.txt
+ ┃
+ ┣ 📦src
+ ┃  ┣ 📂assets
+ ┃  ┃  ┣ 📂data
+ ┃  ┃  ┃ ┣ 📃Animation - 1723397476967.json
+ ┃  ┃  ┃ ┗ 📃list.js
+ ┃  ┃  ┣ 📂fonts
+ ┃  ┃  ┃ ┗ 📃Road_Rage
+ ┃  ┃  ┗ 📂images
+ ┃  ┃     ┣ 📂Background_files
+ ┃  ┃     ┗ 📂Section
+ ┃  ┃        ┣ 📂About
+ ┃  ┃        ┣ 📂Contact
+ ┃  ┃        ┣ 📂Main
+ ┃  ┃        ┗ 📂PjEx
+ ┃  ┃
+ ┃  ┣ 📂components
+ ┃  ┃  ┣ 📂Footer
+ ┃  ┃  ┣ 📂Header
+ ┃  ┃  ┣ 📂SlideCard
+ ┃  ┃  ┗ 📃LoadingAnimation.js
+ ┃  ┃
+ ┃  ┣ 📂features
+ ┃  ┃ ┗ 📃MouseEffect.js
+ ┃  ┃
+ ┃  ┣ 📂pages
+ ┃  ┃  ┣ 📂About
+ ┃  ┃  ┃  ┣ 📃AboutPage.js
+ ┃  ┃  ┃  ┗ 📃AboutPage.styled.js
+ ┃  ┃  ┣ 📂Contact
+ ┃  ┃  ┃  ┣ 📃ContactPage.js
+ ┃  ┃  ┃  ┗ 📃ContactPage.styled.js
+ ┃  ┃  ┣ 📂Example
+ ┃  ┃  ┃  ┣ 📃ExamplePage.js
+ ┃  ┃  ┃  ┗ 📃ExamplePage.styled.js
+ ┃  ┃  ┣ 📂Main
+ ┃  ┃  ┃  ┣ 📃MainPage.js
+ ┃  ┃  ┃  ┗ 📃MainPage.styled.js
+ ┃  ┃  ┗ 📂Project
+ ┃  ┃  ┃  ┣ 📃ProjectPage.js
+ ┃  ┃  ┃  ┗ 📃ProjectPage.styled.js
+ ┃  ┃
+ ┃  ┣ 📂router/
+ ┃  ┃  ┗ router.js
+ ┃  ┃
+ ┃  ┣ 📂App.css
+ ┃  ┣ 📃App.js
+ ┃  ┣ 📃GlobalStyles.js
+ ┃  ┣ 📃index.css
+ ┃  ┗ 📃index.js
+ ┃
+ ┣ 📃.gitignore
+ ┣ 📃README.md
+ ┣ 📃babel.config.js
+ ┣ 📃package-lock.json
+ ┗ 📃package.json
 
 <br /><br />
 
@@ -140,3 +152,4 @@ ahnsj828.github.io/
 - **마우스오버 효과** : 제품 이미지나 정보에 마우스를 올리면 추가적인 정보나 시각적 효과가 표시됩니다.
 
 - **상세 페이지** : 각 제품의 상세 정보를 제공하는 페이지를 구현하여 사용자 경험을 향상시킵니다.
+```
