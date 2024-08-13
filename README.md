@@ -72,58 +72,64 @@ IDE: Visual Studio Code, WebStorm
 
 ## 📁 프로젝트 구조
 
-/about # 'about' 페이지 관련 파일<br />
-│<br />
-├── about.html # 'about' 페이지 HTML 파일<br />
-└── about.css # 'about' 페이지 스타일 파일<br />
-<br />
-/foundation # 'foundation' 페이지 관련 파일<br />
-│<br />
-├── foundation.html # 'foundation' 페이지 HTML 파일<br />
-└── foundation.css # 'foundation' 페이지 스타일 파일<br />
-<br />
-/Header_image # 헤더 이미지 파일<br />
-│<br />
-├── header-image1.png # 헤더 이미지 파일<br />
-└── header-image2.png # 헤더 이미지 파일<br />
-<br />
-/main-images # 메인 페이지 전용 이미지 파일<br />
-│<br />
-├── main-image1.png # 메인 이미지 파일<br />
-└── main-image2.png # 메인 이미지 파일<br />
-<br />
-/makeup # 'makeup' 페이지 관련 파일<br />
-│<br />
-├── makeup.html # 'makeup' 페이지 HTML 파일<br />
-└── makeup.css # 'makeup' 페이지 스타일 파일<br />
-<br />
-/product_inner # 'product_inner' 페이지 관련 파일<br />
-│<br />
-├── product_inner.html # 'product_inner' 페이지 HTML 파일<br />
-└── product_inner.css # 'product_inner' 페이지 스타일 파일<br />
-<br />
-/productAll # 'productAll' 페이지 관련 파일<br />
-│<br />
-├── productAll.html # 'productAll' 페이지 HTML 파일<br />
-└── productAll.css # 'productAll' 페이지 스타일 파일<br />
-<br />
-/store # 'store' 페이지 관련 파일<br />
-│<br />
-├── store.html # 'store' 페이지 HTML 파일<br />
-└── store.css # 'store' 페이지 스타일 파일<br />
-<br />
-/Sofiafont # 폰트 파일<br />
-│<br />
-├── Sofia-Regular.ttf # Sofia Regular 폰트 파일<br />
-└── Sofia-Bold.ttf # Sofia Bold 폰트 파일<br />
-<br />
-etude.gif # 프로젝트 설명용 GIF 파일<br />
-etude2023-180x180-1.png # 파비콘<br />
-<br />
-index.html # 메인 페이지 HTML 파일<br />
-README.md # 프로젝트 설명 및 문서<br />
-script.js # 메인 페이지 자바스크립트 파일<br />
-style.css # 메인 페이지 스타일 파일<br />
+ahnsj828.github.io/
+│
+├── public/
+│ ├── assets/
+│ │ ├── videos/
+│ │ ├── favicon.ico
+│ │ ├── faviconA.ico
+│ │ ├── index.html
+│ │ ├── logo192.png
+│ │ ├── logo512.png
+│ │ ├── manifest.json
+│ │ └── robots.txt
+│
+├── src/
+│ ├── assets/
+│ │ ├── data/
+│ │ │ ├── Animation/
+│ │ │ └── list.js
+│ │ ├── fonts/
+│ │ │ └── Road_Rage/
+│ │ └── images/
+│ │ ├── Background_files/
+│ │ └── Section/
+│ │ ├── About/
+│ │ ├── Contact/
+│ │ ├── Main/
+│ │ └── PjEx/
+│ │
+│ ├── components/
+│ │ ├── Footer/
+│ │ ├── Header/
+│ │ ├── SlideCard/
+│ │ └── LoadingAnimation.js
+│ │
+│ ├── features/
+│ │ └── MouseEffect.js
+│ │
+│ ├── pages/
+│ │ ├── About/
+│ │ ├── Contact/
+│ │ ├── Example/
+│ │ ├── Main/
+│ │ └── Project/
+│ │
+│ ├── router/
+│ │ └── router.js
+│ │
+│ ├── App.css
+│ ├── App.js
+│ ├── GlobalStyles.js
+│ ├── index.css
+│ └── index.js
+│
+├── .gitignore
+├── README.md
+├── babel.config.js
+├── package-lock.json
+└── package.json
 
 <br /><br />
 
