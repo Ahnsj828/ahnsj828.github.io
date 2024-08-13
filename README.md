@@ -1,70 +1,136 @@
-# Getting Started with Create React App
+# 🦆포트폴리오 프로젝트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- <img src="./etude.gif" alt="etude"/><br /> -->
 
-## Available Scripts
+<!-- - 기간 : 2024.7.29 ~ 8.12 -->
 
-In the project directory, you can run:
+- 기간 : 2024.7.18 ~ 8.12
 
-### `npm start`
+- 배포 URL : [포트폴리오 사이트](https://ahn-portfolio.netlify.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br /><br />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 😃프로젝트 소개
 
-### `npm test`
+이 프로젝트는 UI/UX 디자인과 프론트엔드 개발을 공부하고 준비하면서 구현한 포트폴리오 웹사이트입니다. 이 사이트는 제 프로젝트와 프론트엔드 개발 스택을 체계적으로 정리하여 제 역량을 명확하게 보여주는 포트폴리오입니다. 웹사이트는 React를 기반으로 하여 효율적으로 UI를 구성하고, 각 요소를 독립적인 컴포넌트로 관리하여 재사용성과 유지보수성을 높였습니다.
+<br /><br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 😎 개발 환경
 
-### `npm run build`
+<!-- 😎 개발 환경
+운영 체제: Windows, macOS, Linux
+웹 서버: Nginx / Apache (로컬 개발 시 사용 가능)
+브라우저: Chrome, Firefox, Safari
+IDE: Visual Studio Code, WebStorm
+버전 관리 도구: Git, GitHub -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### UI/UX 설계
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Figma** : UI/UX 설계 및 프로토타입 제작을 위한 도구입니다. 사용자 인터페이스와 사용자 경험을 시각적으로 설계하고 문서화했습니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 정보 구조 및 기능 정의
 
-### `npm run eject`
+- **Figma** : 정보 구조(IA), 작업 분해 구조(WBS), 기능 정의서 작성을 위한 도구입니다. 프로젝트의 요구 사항과 기능을 명확히 정의하고 계획했습니다.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### 버전 관리 및 이슈 추적
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **GitHub** : 코드 버전 관리 및 협업을 위한 플랫폼입니다. 리포지토리의 소스 코드를 관리하고, 팀원 간의 협업을 지원합니다.
+- **GitHub Issues** : 버그, 기능 요청, 작업 항목 등을 추적하고 관리하는 도구입니다. 프로젝트의 진행 상황을 효율적으로 관리합니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### 프론트엔드 기술
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **React** : 웹 애플리케이션의 UI를 효율적으로 구성하고 관리하며, 컴포넌트 기반으로 각 요소를 독립적으로 재사용할 수 있도록 사용했습니다.
+- **React Router** : Single Page Application (SPA) 내에서 페이지 간 네비게이션을 원활하게 처리하고 각 페이지의 상태를 안정적으로 유지할 수 있도록 했습니다.
+- **styled-components** : avaScript 내에서 직접 스타일을 정의하고 적용하여, 동적인 스타일링과 코드 유지보수성을 향상시켰습니다.
+- **GSAP** : 고급 애니메이션과 부드러운 이동 애니메이션을 구현하여 사용자 경험을 향상시켰습니다.
+- **LottieFiles** : 페이지 로딩 중 시각적으로 매력적인 애니메이션을 적용하여 사용자가 기다리는 동안 지루함을 느끼지 않도록 개선했습니다.
+- **p5.js** : 마우스 이동에 반응하는 동적 발자국 효과를 구현하여 사용자와의 상호작용을 풍부하게 했습니다.
 
-## Learn More
+#### 배포 환경
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Netlify** : 간편한 배포와 안정적인 호스팅 서비스를 제공받기 위해 사용했습니다.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br /><br />
 
-### Code Splitting
+## 🧐 사용 기술과 브랜치 전략
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### 사용 기술
 
-### Analyzing the Bundle Size
+- **HTML5** : 웹 콘텐츠의 구조와 레이아웃을 구성했습니다. 페이지의 골격을 정의하고 콘텐츠를 배치합니다.
+- **CSS3** : 웹 콘텐츠의 디자인과 스타일링을 담당했습니다. 시각적 효과와 페이지 레이아웃을 구현합니다.
+- **JavaScript** : 동적 기능과 사용자 인터랙션을 구현했습니다. 슬라이드, 스크롤 이벤트 등 다양한 기능을 추가했습니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### 브랜치 전략
 
-### Making a Progressive Web App
+- **main** : 최종적으로 배포 가능한 안정된 버전의 코드를 유지했습니다.
+- **development** : 새로운 기능 추가와 버그 수정을 위한 브랜치로, 작업이 완료된 후 `main` 브랜치에 병합 했습니다.
+- **feature/[기능명]** : 팀원별 개인 브랜치로, 개발이 완료된 후 `development` 브랜치에 병합하여 전체 프로젝트에 통합했습니다.
+  <!-- - **hotfix/[수정명]** : 긴급한 버그 수정 작업을 위한 브랜치입니다. 수정 완료 후 `main`과 `development` 브랜치에 병합됩니다. -->
+  <!-- - **release/[버전명]** : 배포 준비가 완료된 기능을 포함한 브랜치입니다. 최종 테스트 후 `main`과 `development` 브랜치에 병합됩니다. -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<br /><br />
 
-### Advanced Configuration
+## 📁 프로젝트 구조
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+/about # 'about' 페이지 관련 파일<br />
+│<br />
+├── about.html # 'about' 페이지 HTML 파일<br />
+└── about.css # 'about' 페이지 스타일 파일<br />
+<br />
+/foundation # 'foundation' 페이지 관련 파일<br />
+│<br />
+├── foundation.html # 'foundation' 페이지 HTML 파일<br />
+└── foundation.css # 'foundation' 페이지 스타일 파일<br />
+<br />
+/Header_image # 헤더 이미지 파일<br />
+│<br />
+├── header-image1.png # 헤더 이미지 파일<br />
+└── header-image2.png # 헤더 이미지 파일<br />
+<br />
+/main-images # 메인 페이지 전용 이미지 파일<br />
+│<br />
+├── main-image1.png # 메인 이미지 파일<br />
+└── main-image2.png # 메인 이미지 파일<br />
+<br />
+/makeup # 'makeup' 페이지 관련 파일<br />
+│<br />
+├── makeup.html # 'makeup' 페이지 HTML 파일<br />
+└── makeup.css # 'makeup' 페이지 스타일 파일<br />
+<br />
+/product_inner # 'product_inner' 페이지 관련 파일<br />
+│<br />
+├── product_inner.html # 'product_inner' 페이지 HTML 파일<br />
+└── product_inner.css # 'product_inner' 페이지 스타일 파일<br />
+<br />
+/productAll # 'productAll' 페이지 관련 파일<br />
+│<br />
+├── productAll.html # 'productAll' 페이지 HTML 파일<br />
+└── productAll.css # 'productAll' 페이지 스타일 파일<br />
+<br />
+/store # 'store' 페이지 관련 파일<br />
+│<br />
+├── store.html # 'store' 페이지 HTML 파일<br />
+└── store.css # 'store' 페이지 스타일 파일<br />
+<br />
+/Sofiafont # 폰트 파일<br />
+│<br />
+├── Sofia-Regular.ttf # Sofia Regular 폰트 파일<br />
+└── Sofia-Bold.ttf # Sofia Bold 폰트 파일<br />
+<br />
+etude.gif # 프로젝트 설명용 GIF 파일<br />
+etude2023-180x180-1.png # 파비콘<br />
+<br />
+index.html # 메인 페이지 HTML 파일<br />
+README.md # 프로젝트 설명 및 문서<br />
+script.js # 메인 페이지 자바스크립트 파일<br />
+style.css # 메인 페이지 스타일 파일<br />
 
-### Deployment
+<br /><br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 💡 주요 기능
 
-### `npm run build` fails to minify
+- **슬라이드쇼** : 다양한 화장품 제품을 시각적으로 매력적으로 보여주는 슬라이드쇼 기능을 구현하였습니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **마우스오버 효과** : 제품 이미지나 정보에 마우스를 올리면 추가적인 정보나 시각적 효과가 표시됩니다.
+
+- **상세 페이지** : 각 제품의 상세 정보를 제공하는 페이지를 구현하여 사용자 경험을 향상시킵니다.
