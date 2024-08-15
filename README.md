@@ -4,7 +4,7 @@
 
 <!-- - 기간 : 2024.7.29 ~ 8.12 -->
 
-- 기간 : 2024.7.18 ~ 8.12
+- 기간 : 2024.7.18 ~ 8.12 (1차 완성, 현재 개선 중입니다.)
 
 - 배포 URL : [포트폴리오 사이트](https://ahn-portfolio.netlify.app/)
 
@@ -45,30 +45,30 @@ Netlify: 간편한 배포와 안정적인 호스팅을 제공받기 위해 사�
 
 #### UI/UX 설계
 
-- **React**: UI를 효율적으로 구성하고, 컴포넌트 기반으로 재사용성을 높였습니다.
-- **styled-components**: 컴포넌트의 스타일을 JavaScript 내에서 직접 정의하고 적용하여 동적인 스타일링과 코드 유지보수성을 향상시켰습니다.
+- <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" style="height: 20px; margin-top: 5px;"> : UI를 효율적으로 구성하고, 컴포넌트 기반으로 재사용성을 높였습니다.
+- <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" alt="styled-components" style="height: 20px; margin-top: 5px;"> : 컴포넌트의 스타일을 JavaScript 내에서 직접 정의하고 적용하여 동적인 스타일링과 코드 유지보수성을 향상시켰습니다.
 
 #### 네비게이션
 
-- **React Router**: Single Page Application(SPA) 내에서 페이지 간 네비게이션을 원활하게 처리했습니다.
+- <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" alt="React Router" style="height: 20px; margin-top: 5px;"> : Single Page Application(SPA) 내에서 페이지 간 네비게이션을 원활하게 처리했습니다.
 
 #### 애니메이션
 
-- **GSAP (GreenSock Animation Platform)**: 고급 애니메이션과 특정 요소의 부드러운 이동 애니메이션을 구현하여 사용자 경험을 향상시켰습니다.
-- **LottieFiles**: 페이지 로딩 중 시각적으로 매력적인 애니메이션을 적용하여 사용자 경험을 개선했습니다.
+- <img src="https://img.shields.io/badge/GSAP-0AE448?style=for-the-badge&logo=greensock&logoColor=black&color=0AE448" alt="GSAP" style="height: 20px; margin-top: 5px;"> : 고급 애니메이션과 특정 요소의 부드러운 이동 애니메이션을 구현하여 사용자 경험을 향상시켰습니다.
+- <img src="https://img.shields.io/badge/p5%20js-ED225D?style=for-the-badge&logo=p5dotjs&logoColor=white" alt="p5.js" style="height: 20px; margin-top: 5px;"> : 페이지 로딩 중 시각적으로 매력적인 애니메이션을 적용하여 사용자 경험을 개선했습니다.
 
 #### 그래픽 및 인터랙티브 요소
 
-- **p5.js**: 창의적인 코딩과 인터랙티브한 그래픽을 구현했습니다.
+- <img src="https://img.shields.io/badge/p5%20js-ED225D?style=for-the-badge&logo=p5dotjs&logoColor=white" alt="p5.js" style="height: 20px; margin-top: 5px;"> : 창의적인 코딩과 인터랙티브한 그래픽을 구현했습니다.
   - **마우스 효과**: 사용자가 마우스를 움직일 때 발자국 모양의 효과가 화면에 남아, 시각적으로 흥미로운 인터랙션을 제공합니다.
 
 #### 콘텐츠 표시
 
-- **Swiper**: 프로젝트와 예제 페이지에서 슬라이드 형태의 콘텐츠 표시를 구현했습니다.
+- <img src="https://img.shields.io/badge/Swiper-333333?style=for-the-badge&logo=swiper&logoColor=white" alt="Swiper" style="height: 20px; margin-top: 5px;"> : 프로젝트와 예제 페이지에서 슬라이드 형태의 콘텐츠 표시를 구현했습니다.
 
 #### 배포 및 호스팅
 
-- **Netlify**: 간편한 배포와 안정적인 호스팅 서비스를 위해 사용했습니다.
+- <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify" style="height: 20px; margin-top: 5px;"> : 간편한 배포와 안정적인 호스팅 서비스를 위해 사용했습니다.
 
 #### 반응형 디자인
 
