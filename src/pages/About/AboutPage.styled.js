@@ -145,6 +145,8 @@ export const AboutME = styled.article`
 
 export const ContentInner = styled.span`
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1.25rem;
   padding-right: 2.5rem;
   h4 {
@@ -183,10 +185,11 @@ export const AboutTxt = styled.div`
 `;
 export const MyPic = styled.img`
   width: 35%;
-  height: 100%;
-  background-color: gray;
+  height: 90%;
+  /* background-color: gray; */
   border-radius: 5%;
   overflow: hidden;
+  object-fit: cover;
 `;
 
 export const MySkills = styled.article`
