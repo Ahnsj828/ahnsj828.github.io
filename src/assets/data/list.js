@@ -24,16 +24,7 @@ const list = [
     title: "Yeogi Uhddae", // 11글자에 띄어쓰기 포함 총 12글자
     text: "sadlkjsadkljsadssa",
     video: "/assets/videos/yeogi.mp4",
-    useTool: [
-      "HTML",
-      "CSS",
-      "jQuery",
-      "JavaScript",
-      "slick slider",
-      "featherlight",
-      "scrollto",
-      "Firebase",
-    ],
+    useTool: ["HTML", "CSS", "JavaScript", "Firebase"],
     pageLink: "https://comehere-project.web.app/",
     pageLinkImage: linkImage,
   },
