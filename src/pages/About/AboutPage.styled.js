@@ -181,7 +181,7 @@ export const AboutTxt = styled.div`
   margin-right: 5%;
   height: 100%;
 `;
-export const MyPic = styled.div`
+export const MyPic = styled.img`
   width: 35%;
   height: 100%;
   background-color: gray;

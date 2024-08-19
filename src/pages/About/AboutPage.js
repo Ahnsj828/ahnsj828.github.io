@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Pic from "../../assets/images/Section/About/Pic.jpeg";
 
 import {
   AboutSection,
@@ -98,7 +99,7 @@ const AboutPage = () => {
                   않고 끊임없이 성장하는 개발자가 되겠습니다.
                 </p>
               </AboutTxt>
-              <MyPic></MyPic>
+              <MyPic src={Pic} alt="My Picture"></MyPic>
             </ContentInner>
           </AboutME>
         </AboutContent>
