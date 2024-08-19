@@ -75,6 +75,8 @@ const list = [
     useTool: ["HTML", "CSS", "JavaScript", "Firebase", "Figma", "Illustrator"],
     pageLink: "https://tabmenu-pet.web.app/",
     pageLinkImage: linkImage,
+    githubLink: "https://github.com/Ahnsj828/tab_menu",
+    githubLinkImage: githubImage,
     figmaLink:
       "https://www.figma.com/design/zlMyjba4e322zTe6LW0jZf/Tab-Menu?node-id=0-1&m=dev&t=8w8vzNjwNNzFo4m1-1",
     figmaLinkImage: figmaImage,
@@ -88,6 +90,8 @@ const list = [
     useTool: ["HTML", "CSS", "JavaScript", "Firebase", "Figma", "Photoshop"],
     pageLink: "https://naver-log-in.web.app/",
     pageLinkImage: linkImage,
+    githubLink: "https://github.com/Ahnsj828/naver_login",
+    githubLinkImage: githubImage,
     figmaLink:
       "https://www.figma.com/design/YgTaAL30PpGrZE05mykgzv/Log-in?node-id=0-1&m=dev&t=aaukuFtAE4MjmfjI-1",
     figmaLinkImage: figmaImage,
@@ -101,6 +105,8 @@ const list = [
     useTool: ["HTML", "CSS", "JavaScript", "Figma", "Firebase"],
     pageLink: "https://to-do-list-with-js.web.app/",
     pageLinkImage: linkImage,
+    githubLink: "https://github.com/Ahnsj828/ToDoList-JavaScript",
+    githubLinkImage: githubImage,
     figmaLink:
       "https://www.figma.com/design/SFU6V5ZANKbuVlO2tJr0p2/To-Do-List?node-id=0-1&t=qxfFmqgSMfr6ziFc-1",
     figmaLinkImage: figmaImage,
@@ -114,6 +120,8 @@ const list = [
     useTool: ["HTML", "CSS", "JavaScript", "Photoshop", "Firebase"],
     pageLink: "https://navigation-responsive.web.app/",
     pageLinkImage: linkImage,
+    githubLink: "https://github.com/Ahnsj828/Navigation",
+    githubLinkImage: githubImage,
     figmaLink:
       "https://www.figma.com/design/TpSpMDKOkrFGGxgEDXf52O/Navigation?node-id=0-1&m=dev&t=vsCaPxDXmLKBur1y-1",
     figmaLinkImage: figmaImage,
