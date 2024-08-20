@@ -8,9 +8,9 @@ export const ProjectSection = styled.section`
   border: 2px solid;
   border-radius: 2px;
   background: #5a8fcf; //파란 하늘색.
-  width: 75%;
-  height: 65%;
-  margin-top: 3%;
+  width: 90%;
+  height: 70%;
+  margin-top: 4%;
   padding: 1rem;
 `;
 

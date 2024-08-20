@@ -5,12 +5,12 @@ export const ExampleSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: start;
-  width: 75%;
-  height: 65%;
+  width: 90%;
+  height: 70%;
   border: 2px solid;
   border-radius: 2px;
   background: #53a8ae; //파란 하늘색.
-  margin-top: 3%;
+  margin-top: 4%;
   padding: 1rem;
 `;
 
