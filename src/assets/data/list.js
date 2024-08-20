@@ -76,7 +76,7 @@ const list = [
     id: 6,
     type: "ex",
     title: "naver login", // 10글자에 띄어쓰기 포함 총 11자
-    text: "sadlkjsadkljsadssa",
+    text: "일부 디자인을 변경한 네이버 로그인 클론 코딩한 예제입니다.",
     video: "/assets/videos/naverLogin.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Firebase", "Figma", "Photoshop"],
     pageLink: "https://naver-log-in.web.app/",
@@ -91,7 +91,7 @@ const list = [
     id: 7,
     type: "ex",
     title: "To do list", // 8글자에 띄어쓰기 포함 총 10자
-    text: "sadlkjsadkljsadssa",
+    text: "로컬 스토리지에 저장되는 To Do List입니다.",
     video: "/assets/videos/toDoList.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Figma", "Firebase"],
     pageLink: "https://to-do-list-with-js.web.app/",
