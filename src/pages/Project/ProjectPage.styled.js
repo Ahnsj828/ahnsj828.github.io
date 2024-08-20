@@ -5,11 +5,11 @@ export const ProjectSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: start;
+  width: 90%;
+  height: 70%;
   border: 2px solid;
   border-radius: 2px;
   background: #5a8fcf; //파란 하늘색.
-  width: 90%;
-  height: 70%;
   margin-top: 4%;
   padding: 1rem;
 `;
