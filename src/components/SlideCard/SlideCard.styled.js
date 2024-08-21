@@ -121,8 +121,8 @@ export const UseTool = styled.span`
   border: 1px solid #efefef;
   color: #393939;
   font-family: "IM_Hyemin-Bold";
-  font-size: 1.5rem;
-  line-height: 2.5rem;
+  font-size: 1rem;
+  line-height: 2rem;
   letter-spacing: 0.1rem;
   word-break: keep-all;
 
@@ -137,14 +137,6 @@ export const UseTool = styled.span`
   background-color: #fff; /* 배경색 (필요에 따라 변경) */
   border-radius: 0.25rem; /* 모서리 둥글기 */
   white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
-
-  /* padding: 0.2rem 0.5rem; */
-
-  /* padding: 0.01rem;
-  border: none;
-  background: none;
-  border-radius: 0;
-  box-shadow: inset 0 -0.2rem 0 #f8a05f; */
 `;
 
 export const Links = styled.div`
