@@ -25,64 +25,54 @@ export const SlideContent = styled.div`
 `;
 
 export const Monitor = styled.div`
-  padding-top: 1%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52%;
-  height: 76%;
-  position: relative;
+  width: 47%;
+  height: 72%;
   background-image: url(${(props) => props.$bgImage}); /* Transient prop 사용 */
-  background-size: contain; /* 이미지 비율 유지 */
+  background-size: 100% 100%; /* 이미지 비율 유지 */
   background-repeat: no-repeat; /* 이미지 반복 안 함 */
   background-position: center; /* 이미지 중앙 정렬 */
+  padding-top: 0.5%;
+  /* border: 1px solid #f00; */
 `;
 
 export const Video = styled.video`
-  width: 85%;
+  width: 93%;
   height: auto;
   position: absolute;
   z-index: 1;
   padding-top: 2%;
 `;
 
-// Slideintro, UseTools, UseTool, Links, PageLink 스타일 유지
 export const Slideintro = styled.span`
-  width: 50%;
-  margin-left: 2%;
-  height: 100%;
-  padding: 1%;
-
   display: flex;
-  flex-direction: column; /* 세로 방향으로 정렬 */
-  gap: 1rem; /* 요소 간의 간격 */
+  flex-direction: column;
   align-items: flex-end;
+  width: 51.5%;
+  height: 100%;
+  padding-top: 1%;
+  margin-left: 1%;
+  gap: 1rem;
+  /* border: 1px solid green; */
+`;
 
-  h4 {
-    width: auto;
-    box-shadow: inset 0 -20px 0 #f8a05f; // 밝은 오렌지색
-    text-transform: uppercase;
-    font-size: 40px;
-    font-size: 2.5em;
-    font-weight: bold;
-    &:last-child {
-      width: 51%;
-    }
-  }
-  p {
-    color: #393939;
-    font-family: "IM_Hyemin-Bold";
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    letter-spacing: 0.1rem;
-    word-break: keep-all;
-  }
+export const SlideTxt = styled.div`
+  /* border: 1px solid #f00; */
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 `;
 
 export const UseTools = styled.div`
   display: flex;
-  flex-wrap: wrap; /* 줄 바꿈을 허용 */
-  gap: 0.7rem; /* 항목 간의 간격 */
+  flex-wrap: wrap;
+  gap: 0.7rem;
 `;
 
 export const UseTool = styled.span`
@@ -105,6 +95,15 @@ export const UseTool = styled.span`
   background-color: #fff; /* 배경색 (필요에 따라 변경) */
   border-radius: 0.25rem; /* 모서리 둥글기 */
   white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
+`;
+
+export const Introduce = styled.div`
+  color: #393939;
+  font-family: "IM_Hyemin-Bold";
+  font-size: 1.3rem;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+  word-break: keep-all;
 `;
 
 export const Links = styled.div`

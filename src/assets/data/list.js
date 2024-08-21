@@ -7,7 +7,7 @@ const list = [
     id: 1,
     type: "pj",
     title: "Etude House", // 10글자에 띄어쓰기 포함 총 11글자
-    text: "sadlkjsadkljsadssa",
+    text: "에뛰드하우스 웹 페이지를 클론 코딩하여 다양한 시각적 효과와 인터랙션을 재현하고, 사용자 친화적인 UI/UX를 구현했습니다. 주요 기능으로는 무한 자동 슬라이드, 지정된 시간 동안 번갈아 가며 표시되는 문구, 마우스오버 효과, 상세 페이지, 검색 및 필터링, 그리고 반응형 디자인이 포함됩니다.",
     video: "/assets/videos/etude.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Figma", "Git-Hub"],
     pageLink: "https://etude-boo-0329.web.app/index.html",
@@ -22,7 +22,7 @@ const list = [
     id: 2,
     type: "pj",
     title: "Yeogi Uhddae", // 11글자에 띄어쓰기 포함 총 12글자
-    text: "sadlkjsadkljsadssa",
+    // text: "sadlkjsadkljsadssa",
     video: "/assets/videos/yeogi.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Firebase"],
     pageLink: "https://comehere-project.web.app/",
@@ -32,7 +32,7 @@ const list = [
     id: 3,
     type: "pj",
     title: "corporate page", // 13글자에 띄어쓰기 포함 총 14자
-    text: "sadlkjsadkljsadssa",
+    // text: "sadlkjsadkljsadssa",
     video: "/assets/videos/corporate.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Firebase"],
     pageLink: "https://architecture-agency-114af.web.app/",
@@ -42,7 +42,7 @@ const list = [
     id: 4,
     type: "pj",
     title: "Shopping Page", // 12글자에 띄어쓰기 포함 총 13자
-    text: "sadlkjsadkljsadssa",
+    // text: "sadlkjsadkljsadssa",
     video: "/assets/videos/shopping.mp4",
     useTool: [
       "React",
@@ -61,7 +61,7 @@ const list = [
     id: 5,
     type: "ex",
     title: "tab menu", // 7글자에 띄어쓰기 포함 총 8자
-    text: "sadlkjsadkljsadssa",
+    // text: "sadlkjsadkljsadssa",
     video: "/assets/videos/tabMenu.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Firebase", "Figma", "Illustrator"],
     pageLink: "https://tabmenu-pet.web.app/",
@@ -106,7 +106,7 @@ const list = [
     id: 8,
     type: "ex",
     title: "Navigation", // 총 10자
-    text: "sadlkjsadkljsadssa",
+    // text: "sadlkjsadkljsadssa",
     video: "/assets/videos/navigation.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Photoshop", "Firebase"],
     pageLink: "https://navigation-responsive.web.app/",

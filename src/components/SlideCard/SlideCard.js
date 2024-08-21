@@ -7,8 +7,10 @@ import {
   Monitor,
   Video,
   Slideintro,
+  SlideTxt,
   UseTools,
   UseTool,
+  Introduce,
   Links,
   PageLink,
 } from "./SlideCard.styled";
@@ -43,11 +45,14 @@ const SlideCard = ({ list }) => {
           </Video>
         </Monitor>
         <Slideintro>
-          <UseTools>
-            {(list.useTool || []).map((tool, index) => (
-              <UseTool key={index}>{tool}</UseTool>
-            ))}
-          </UseTools>
+          <SlideTxt>
+            <UseTools>
+              {(list.useTool || []).map((tool, index) => (
+                <UseTool key={index}>{tool}</UseTool>
+              ))}
+            </UseTools>
+            {list.text && <Introduce>{list.text}</Introduce>}
+          </SlideTxt>
           <Links>
             {list.pageLink && (
               <Link
