@@ -12,70 +12,42 @@ export const SlideTitle = styled.div`
   font-size: 40px;
   font-size: 2.5em;
   font-weight: bold;
-  box-shadow: inset 0 -20px 0 #f8a05f; //  밝은 오렌지색
-  margin: 1rem 0.3125rem 1.8rem 1rem;
-
+  box-shadow: inset 0 -20px 0 #f8a05f; // 밝은 오렌지색
+  margin: 1rem 0.3125rem 2.5rem 1rem;
   padding-left: 0.3rem;
   width: ${(props) => props.width || "auto"};
-  p {
-    color: #393939;
-    font-family: "IM_Hyemin-Bold";
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    letter-spacing: 0.1rem;
-    word-break: keep-all;
-  }
 `;
 
 export const SlideContent = styled.div`
-  /* border: 1px solid darkcyan; */
   display: flex;
-  /* align-items: center; */
   width: 100%;
   height: 85%;
 `;
 
-export const SlideVideo = styled.span`
-  /* border: 1px solid darkcyan; */
+export const Monitor = styled.div`
   padding-top: 1%;
-  display: inline-block;
-  width: 52%;
-  height: 76%;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
-  /* background-color: gray; */
-  /* border-radius: 5%; */
-  overflow: hidden;
+  justify-content: center;
+  width: 52%;
+  height: 76%;
   position: relative;
-
-  /* width: 100%; */
-  /* height: auto; */
-  overflow: hidden;
-
-  video {
-    width: 80%;
-    height: auto;
-    width: auto;
-    height: 73.5%;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1; /* Monitor를 비디오 위에 배치 */
-    padding-top: 2%;
-  }
+  background-image: url(${(props) => props.$bgImage}); /* Transient prop 사용 */
+  background-size: contain; /* 이미지 비율 유지 */
+  background-repeat: no-repeat; /* 이미지 반복 안 함 */
+  background-position: center; /* 이미지 중앙 정렬 */
 `;
 
-export const Monitor = styled.img`
-  width: auto;
-  height: 100%;
-  object-fit: contain; /* 이미지 비율 유지 */
+export const Video = styled.video`
+  width: 85%;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  padding-top: 2%;
 `;
 
+// Slideintro, UseTools, UseTool, Links, PageLink 스타일 유지
 export const Slideintro = styled.span`
-  /* border: 1px solid #f00; */
   width: 50%;
   margin-left: 2%;
   height: 100%;
@@ -88,9 +60,7 @@ export const Slideintro = styled.span`
 
   h4 {
     width: auto;
-    /* margin: 0.3125rem;
-    margin-bottom: 2rem; */
-    box-shadow: inset 0 -20px 0 #f8a05f; //  밝은 오렌지색
+    box-shadow: inset 0 -20px 0 #f8a05f; // 밝은 오렌지색
     text-transform: uppercase;
     font-size: 40px;
     font-size: 2.5em;
@@ -113,12 +83,10 @@ export const UseTools = styled.div`
   display: flex;
   flex-wrap: wrap; /* 줄 바꿈을 허용 */
   gap: 0.7rem; /* 항목 간의 간격 */
-  /* border: 1px solid #f00; */
 `;
 
 export const UseTool = styled.span`
   border: 1px solid #393939;
-  border: 1px solid #efefef;
   color: #393939;
   font-family: "IM_Hyemin-Bold";
   font-size: 1rem;
@@ -126,7 +94,7 @@ export const UseTool = styled.span`
   letter-spacing: 0.1rem;
   word-break: keep-all;
 
-  box-shadow: inset 0 -3px 0 #f8a05f; //  밝은 오렌지색
+  box-shadow: inset 0 -3px 0 #f8a05f; // 밝은 오렌지색
 
   border: 1px solid #f8a05f;
   border: 1px solid #393939;

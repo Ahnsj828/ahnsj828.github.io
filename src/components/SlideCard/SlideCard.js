@@ -4,8 +4,8 @@ import {
   SlideInner,
   SlideTitle,
   SlideContent,
-  SlideVideo,
   Monitor,
+  Video,
   Slideintro,
   UseTools,
   UseTool,
@@ -36,13 +36,12 @@ const SlideCard = ({ list }) => {
     <SlideInner>
       <SlideTitle width={titleWidth}>{list.title}</SlideTitle>
       <SlideContent>
-        <SlideVideo>
-          <Monitor src={browser} alt="monitor" />
-          <video width="100%" height="auto" autoPlay loop muted playsInline>
+        <Monitor $bgImage={browser}>
+          <Video width="100%" height="auto" autoPlay loop muted playsInline>
             <source src={list.video} type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
-        </SlideVideo>
+          </Video>
+        </Monitor>
         <Slideintro>
           <UseTools>
             {(list.useTool || []).map((tool, index) => (
