@@ -7,7 +7,7 @@ const list = [
     id: 1,
     type: "pj",
     title: "Etude House", // 10글자에 띄어쓰기 포함 총 11글자
-    text: "에뛰드하우스 웹 페이지를 클론 코딩하여 다양한 시각적 효과와 인터랙션을 재현하고, 사용자 친화적인 UI/UX를 구현했습니다. 주요 기능으로는 무한 자동 슬라이드, 지정된 시간 동안 번갈아 가며 표시되는 문구, 마우스오버 효과, 상세 페이지, 검색 및 필터링, 그리고 반응형 디자인이 포함됩니다.",
+    text: "에뛰드하우스 웹 페이지를 클론 코딩하여 다양한 시각적 효과와 인터랙션을 재현하고, 사용자 친화적인 UI/UX를 구현했습니다. 주요 기능으로는 무한 자동 슬라이드, 지정된 시간 동안 번갈아 가며 표시되는 문구, 마우스오버 효과, 상세 페이지, 필터링, 그리고 반응형 디자인이 포함됩니다.",
     video: "/assets/videos/etude.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Figma", "Git-Hub"],
     pageLink: "https://etude-boo-0329.web.app/index.html",
@@ -22,7 +22,7 @@ const list = [
     id: 2,
     type: "pj",
     title: "Yeogi Uhddae", // 11글자에 띄어쓰기 포함 총 12글자
-    // text: "sadlkjsadkljsadssa",
+    text: "‘여기어때’ 페이지를 클론 코딩하여, 스크롤 시 고정된 헤더와 배경 및 글자 색 변화 효과를 구현했습니다. 또한, 반응형 디자인을 적용하여 태블릿 사이즈부터 메뉴를 토글 버튼으로 변경하고, 버튼 클릭 시 오른쪽에서 왼쪽으로 메뉴가 슬라이드되도록 구현했습니다.",
     video: "/assets/videos/yeogi.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Firebase"],
     pageLink: "https://comehere-project.web.app/",
@@ -32,7 +32,7 @@ const list = [
     id: 3,
     type: "pj",
     title: "corporate page", // 13글자에 띄어쓰기 포함 총 14자
-    // text: "sadlkjsadkljsadssa",
+    text: "기업 페이지를 클론 코딩하여, Slick Slider, Featherlight, ScrollTo 등의 기능을 활용한 다양한 시각적 효과와 인터랙션을 구현했습니다. 반응형 디자인을 적용하였고, 토글 기능을 통해 모바일에서 메뉴를 간편하게 사용할 수 있도록 했습니다.",
     video: "/assets/videos/corporate.mp4",
     useTool: [
       "HTML",
@@ -50,7 +50,7 @@ const list = [
     id: 4,
     type: "pj",
     title: "Shopping Page", // 12글자에 띄어쓰기 포함 총 13자
-    // text: "sadlkjsadkljsadssa",
+    text: "쇼핑몰 페이지를 구현하여, 로그인 후 제품의 상세 정보를 볼 수 있습니다. 검색 기능을 통해 관련 제품을 쉽게 찾을 수 있도록 구현했습니다.",
     video: "/assets/videos/shopping.mp4",
     useTool: [
       "React",
