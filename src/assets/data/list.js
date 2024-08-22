@@ -34,7 +34,15 @@ const list = [
     title: "corporate page", // 13글자에 띄어쓰기 포함 총 14자
     // text: "sadlkjsadkljsadssa",
     video: "/assets/videos/corporate.mp4",
-    useTool: ["HTML", "CSS", "JavaScript", "Firebase"],
+    useTool: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "slick slider",
+      "featherlight",
+      "scrollto",
+      "Firebase",
+    ],
     pageLink: "https://architecture-agency-114af.web.app/",
     pageLinkImage: linkImage,
   },
