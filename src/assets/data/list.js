@@ -69,7 +69,7 @@ const list = [
     id: 5,
     type: "ex",
     title: "tab menu", // 7글자에 띄어쓰기 포함 총 8자
-    // text: "sadlkjsadkljsadssa",
+    text: "텝 메뉴 예제를 구현하여, 사용자가 각 탭을 클릭할 때 해당 탭에 맞는 콘텐츠가 동적으로 표시되도록 설계했습니다. 직관적인 인터페이스와 부드러운 전환 효과를 통해 사용자 경험을 향상시키는 데 중점을 두었습니다.",
     video: "/assets/videos/tabMenu.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Firebase", "Figma", "Illustrator"],
     pageLink: "https://tabmenu-pet.web.app/",
@@ -84,7 +84,7 @@ const list = [
     id: 6,
     type: "ex",
     title: "naver login", // 10글자에 띄어쓰기 포함 총 11자
-    text: "일부 디자인을 변경한 네이버 로그인 클론 코딩한 예제입니다.",
+    text: "일부 디자인을 변경한 네이버 로그인 클론 코딩한 예제입니다. 로그인 필드 미작성 시 알림 메시지를 추가했습니다. QR 코드 로그인 기능에 랜덤 숫자와 시간 제한 기능을 구현했으며, 배너 광고는 랜덤으로 표시되도록 설정했습니다.",
     video: "/assets/videos/naverLogin.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Firebase", "Figma", "Photoshop"],
     pageLink: "https://naver-log-in.web.app/",
@@ -99,7 +99,7 @@ const list = [
     id: 7,
     type: "ex",
     title: "To do list", // 8글자에 띄어쓰기 포함 총 10자
-    text: "로컬 스토리지에 저장되는 To Do List입니다.",
+    text: "JavaScript를 활용한 ToDo List 애플리케이션입니다. 사용자가 입력한 할 일 항목이 'To Do' 목록에 추가됩니다. 항목은 드래그하여 'Doing' 또는 'Done'으로 이동할 수 있습니다. 로컬 스토리지에 저장되어 페이지 새로고침 시에도 데이터가 유지됩니다. 마우스 우클릭 시 항목을 삭제할 수 있습니다.",
     video: "/assets/videos/toDoList.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Figma", "Firebase"],
     pageLink: "https://to-do-list-with-js.web.app/",
@@ -114,7 +114,7 @@ const list = [
     id: 8,
     type: "ex",
     title: "Navigation", // 총 10자
-    // text: "sadlkjsadkljsadssa",
+    text: "헤더 메뉴와 아이콘에 마우스 오버 시 시각적 효과를 추가하여 사용자 인터랙션을 강화했습니다. 반응형 디자인을 적용해 태블릿 사이즈부터는 메뉴가 사라지고, 토글 버튼을 통해 메뉴가 오른쪽에서 왼쪽으로 슬라이드하여 나타나고 사라지는 기능을 구현했습니다.",
     video: "/assets/videos/navigation.mp4",
     useTool: ["HTML", "CSS", "JavaScript", "Photoshop", "Firebase"],
     pageLink: "https://navigation-responsive.web.app/",
